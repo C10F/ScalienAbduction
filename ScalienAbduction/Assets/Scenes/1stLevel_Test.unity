@@ -225,6 +225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FpsController
       objectReference: {fileID: 0}
+    - target: {fileID: 6712541228575790068, guid: a03abaf24303b954d8325089fde9ed90,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6712541228575790069, guid: a03abaf24303b954d8325089fde9ed90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -299,6 +304,26 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpHeight
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712541228575790070, guid: a03abaf24303b954d8325089fde9ed90,
+        type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712541228575790070, guid: a03abaf24303b954d8325089fde9ed90,
+        type: 3}
+      propertyPath: gravity
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712541229230225051, guid: a03abaf24303b954d8325089fde9ed90,
+        type: 3}
+      propertyPath: field of view
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712541229230225053, guid: a03abaf24303b954d8325089fde9ed90,
+        type: 3}
+      propertyPath: mouseSensitivity
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a03abaf24303b954d8325089fde9ed90, type: 3}
