@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 600f27d23679dd54ba33762034f777ac
   - enabled: 1
-    path: Assets/Scenes/1stLevel_Test.unity
+    path: Assets/Scenes/1stLevel_Test_Nicolai_DoorLogic.unity
     guid: 5beca3588f75e1342bb2fcb1514b7cec
   - enabled: 1
     path: Assets/Scenes/baseScene.unity
