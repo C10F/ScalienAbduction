@@ -9,9 +9,9 @@ public class Scaling : MonoBehaviour
 
     bool overColliding = false;
 
-    Vector3 smallCube = new Vector3(2.0f, 2.0f, 2.0f);
-    Vector3 mediumCube = new Vector3(5.0f, 5.0f, 5.0f);
-    Vector3 largeCube = new Vector3(10.0f, 10.0f, 10.0f);
+    Vector3 smallCube = new Vector3(200f, 200f, 200f);
+    Vector3 mediumCube = new Vector3(500f, 500f, 500f);
+    Vector3 largeCube = new Vector3(1000f, 1000f, 1000f);
 
 
 

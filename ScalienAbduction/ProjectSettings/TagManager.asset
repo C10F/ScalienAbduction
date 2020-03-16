@@ -4,22 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - mediumBlock
   - smallBlock
-  - mediumPreasurePlate
-  - smallPreasurePlateA
+  - floorDiode
   - smallPreasurePlateB
+  - mediumPreasurePlate
+  - mediumBlock
+  - smallPreasurePlateA
   - mediumPreasurePlateRim
   - smallPreasurePlateRimA
   - smallPreasurePlateRimB
-  - floorDiode
-=======
-  - Small Cube
   - Medium Cube
-  - Picked Up
+  - Small Cube
   - Large Cube
->>>>>>> Pick-Up-&-Pull
   layers:
   - Default
   - TransparentFX

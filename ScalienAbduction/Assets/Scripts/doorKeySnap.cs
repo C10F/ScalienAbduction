@@ -33,7 +33,7 @@ public class doorKeySnap : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "mediumPreasurePlate" && other.isTrigger && gameObject.tag == "mediumBlock")
+        if (other.tag == "mediumPreasurePlate" && other.isTrigger && gameObject.tag == "Medium Cube")
         {
             //snapped = true;
             //snapparent = other.gameObject;
@@ -43,7 +43,7 @@ public class doorKeySnap : MonoBehaviour
             mediumUnlocked = true;
         }
 
-        if (other.tag == "smallPreasurePlateA" && other.isTrigger && gameObject.tag == "smallBlock")
+        if (other.tag == "smallPreasurePlateA" && other.isTrigger && gameObject.tag == "Small Cube")
         {
             //snapped = true;
             //snapparent = other.gameObject;
@@ -52,7 +52,7 @@ public class doorKeySnap : MonoBehaviour
             cubeRenderer.material.SetColor("_Color", Color.green);
             smallAUnlocked = true;
         }
-        if (other.tag == "smallPreasurePlateB" && other.isTrigger && gameObject.tag == "smallBlock")
+        if (other.tag == "smallPreasurePlateB" && other.isTrigger && gameObject.tag == "Small Cube")
         {
             //snapped = true;
             //snapparent = other.gameObject;
