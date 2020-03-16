@@ -19,7 +19,7 @@ public class RayCast : MonoBehaviour
     }
     void HitByRay()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance: 10))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance: 15))
         {
             Debug.Log("Looking at: " + hit.transform);
             if (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube")
@@ -35,26 +35,16 @@ public class RayCast : MonoBehaviour
                     else { TheHitBox = null; }
                 }
             }
-            if (hit.transform.tag == "Medium Cube")
-            {
-                //Run code when looking at cube, indicator code?
-
-                if (Input.GetKeyDown("e"))
-                {
-                    //Run code when pressing 'e' on cube, pickup or shove?
-                    Debug.Log("Pressed to pickup medium cube");
-                }
-                if (Input.GetKeyDown("r"))
+                if (Input.GetKeyDown("r") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube"))
                 {
                     //Run code when pressing 'r' on cube, scale up.
-                    hit.transform.SendMessage("InsertUpScalingMethodName");
+                    hit.transform.SendMessage("downScale");
                 }
-                if (Input.GetKeyDown("t"))
+                if (Input.GetKeyDown("t") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube"))
                 {
                     //Run code when pressing 't' on cube, scale up.
-                    hit.transform.SendMessage("InsertDownScalingMethodName");
+                    hit.transform.SendMessage("upScale");
                 }
             }
         }
     }
-}

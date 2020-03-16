@@ -7,6 +7,7 @@ TagManager:
   - Small Cube
   - Medium Cube
   - Picked Up
+  - Large Cube
   layers:
   - Default
   - TransparentFX
