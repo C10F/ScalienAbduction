@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/1stLevel_Test_Nicolai_DoorLogic.unity
+=======
+- path: Assets/Scenes/OliTest.unity
+>>>>>>> Pick-Up-&-Pull
   isLoaded: 1
   isActive: 1
   isSubScene: 0
