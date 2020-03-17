@@ -64,16 +64,16 @@ public class Scaling : MonoBehaviour
         }
     }
 
-    void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.tag == "Player")
-            overColliding = true;
-        Debug.Log("Colliding");
-    }
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.tag == "Player")
-            overColliding = false;
-        Debug.Log("Colliding");
-    }
+    //void OnCollisionStay(Collision collision)
+    //{
+    //    if (collision.collider.tag == "Player")
+    //        overColliding = true;
+    //    Debug.Log("Colliding");
+    //}
+    //void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.collider.tag == "Player")
+    //        overColliding = false;
+    //    Debug.Log("Colliding");
+    //}
 }

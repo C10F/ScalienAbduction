@@ -44,7 +44,7 @@ public class Push : MonoBehaviour
                     GetComponent<Rigidbody>().AddForce(force * pCorrectionForce);
 
                     GetComponent<Rigidbody>().velocity *= Mathf.Min(1.0f, force.magnitude / 2);
-            if (Input.GetKeyDown("e") || Vector3.Distance(targetPoint, transform.position) > 8)
+            if (Input.GetKeyDown("f") || Vector3.Distance(targetPoint, transform.position) > 8)
             {
                 pushed = false;
                 }
@@ -74,11 +74,11 @@ public class Push : MonoBehaviour
         if (collision.collider.tag != "Player") {
             Collision = true;
         }
-        Debug.Log("collision happened sir, sorry");
+        //Debug.Log("collision happened sir, sorry");
     }
     void OnCollisionExit()
     {
         Collision = false;
-        Debug.Log("collision gone");
+        //Debug.Log("collision gone");
     }
 }

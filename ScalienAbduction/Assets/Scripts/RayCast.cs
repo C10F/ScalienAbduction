@@ -21,7 +21,7 @@ public class RayCast : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance: 15))
         {
-            Debug.Log("Looking at: " + hit.transform);
+            //Debug.Log("Looking at: " + hit.transform);
             if (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube")
             {
                 if (Input.GetKeyDown("e"))

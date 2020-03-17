@@ -31,7 +31,7 @@ public class CollisionCheck : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
             isColliding = true;
-        Debug.Log("Colliding");
+        //Debug.Log("Colliding");
     }
 
     void OnCollisionExit(Collision collision)

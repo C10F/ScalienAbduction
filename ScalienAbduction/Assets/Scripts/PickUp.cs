@@ -24,6 +24,7 @@ public class PickUp : MonoBehaviour
             }
             if (pickedUp)
             {
+                Debug.Log("picked up was true, set mass to 1");
                 GetComponent<Rigidbody>().mass = 1;
                 if (GetComponent<Rigidbody>().constraints != RigidbodyConstraints.FreezeRotation)
                 {
@@ -45,8 +46,9 @@ public class PickUp : MonoBehaviour
                     GetComponent<Rigidbody>().velocity *= Mathf.Min(1.0f, force.magnitude / 2);
                 }
 
-                if (Input.GetKeyDown("e") || Vector3.Distance(targetPoint, transform.position) > 12)
+                if (Input.GetKeyDown("f") || Vector3.Distance(targetPoint, transform.position) > 12)
                 {
+                    Debug.Log("took key down e and set pickedUp to false");
                     pickedUp = false;
                 }
             }
@@ -66,20 +68,22 @@ public class PickUp : MonoBehaviour
 
     void pickUp()
     {
+        Debug.Log("got as far as pickUp");
         if (!pickedUp)
         {
             pickedUp = true;
+            Debug.Log("pickUp was false, set to true");
         }
     }
 
     void OnCollisionEnter()
     {
         Collision = true;
-        Debug.Log("collision happened sir, sorry");
+        //Debug.Log("collision happened sir, sorry");
     }
     void OnCollisionExit()
     {
         Collision = false;
-        Debug.Log("collision gone");
+        //Debug.Log("collision gone");
     }
 }
