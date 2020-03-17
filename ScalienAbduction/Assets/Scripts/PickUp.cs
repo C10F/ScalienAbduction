@@ -14,6 +14,12 @@ public class PickUp : MonoBehaviour
 
     public float time; // Float used to set a timer between being able to pick-up and put down items.
 
+    private void Start()
+    {
+        playerPosition = GameObject.Find("FPSCamera");
+        Hold = GameObject.Find("hold");
+    }
+
     private void Update()
     {
         time++; //  Increment time
@@ -45,7 +51,6 @@ public class PickUp : MonoBehaviour
                 if (Collision) // If object is colliding
                 {
                     transform.parent = null; // Remove parent
-                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Remove constraints
 
                     Vector3 force = Hold.transform.position - this.transform.position; // Set force to difference between target position and current position
 

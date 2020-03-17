@@ -14,6 +14,12 @@ public class Push : MonoBehaviour
 
     private float time; // Float used to set a timer between being able to pick-up and put down items.
 
+    private void Start()
+    {
+        playerPosition = GameObject.Find("FPSCamera");
+        pushSpot = GameObject.Find("pushpot");
+}
+
     private void Update()
     {
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // remove constraints

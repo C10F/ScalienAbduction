@@ -779,7 +779,7 @@ PrefabInstance:
     - target: {fileID: 7597543949836209662, guid: c935dcc530c305c409d15dff7d0ffb75,
         type: 3}
       propertyPath: m_Name
-      value: NEWsmallCubewithScripts
+      value: Cube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c935dcc530c305c409d15dff7d0ffb75, type: 3}
@@ -1052,7 +1052,7 @@ PrefabInstance:
     - target: {fileID: 3053433439281623149, guid: f0b187ff987ad8b48afddaa4f2384f50,
         type: 3}
       propertyPath: m_Name
-      value: NEWFpsControllerNeededForNewCube
+      value: FPSController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0b187ff987ad8b48afddaa4f2384f50, type: 3}
