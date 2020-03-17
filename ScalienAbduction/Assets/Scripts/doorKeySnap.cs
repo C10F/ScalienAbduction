@@ -31,7 +31,30 @@ public class doorKeySnap : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "mediumPreasurePlate" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
+        {
+            var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.red);
+            mediumUnlocked = false;
+        }
+
+        if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
+        {
+            var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.red);
+            smallAUnlocked = false;
+        }
+        if (other.tag == "smallPreasurePlateB" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
+        {
+            var cubeRenderer = smallPreasurePlateRimB.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.red);
+            smallBUnlocked = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "mediumPreasurePlate" && other.isTrigger && gameObject.tag == "Medium Cube")
         {
@@ -45,21 +68,33 @@ public class doorKeySnap : MonoBehaviour
 
         if (other.tag == "smallPreasurePlateA" && other.isTrigger && gameObject.tag == "Small Cube")
         {
-            //snapped = true;
-            //snapparent = other.gameObject;
-            //offset = transform.position - snapparent.transform.position; //store relation to parent
             var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);
             smallAUnlocked = true;
         }
         if (other.tag == "smallPreasurePlateB" && other.isTrigger && gameObject.tag == "Small Cube")
         {
-            //snapped = true;
-            //snapparent = other.gameObject;
-            //offset = transform.position - snapparent.transform.position; //store relation to parent
             var cubeRenderer = smallPreasurePlateRimB.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);
             smallBUnlocked = true;
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+        if (other.tag == "mediumPreasurePlate" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Large Cube"))
+        {
+            var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.red);
+            mediumUnlocked = false;
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+        if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
+        {
+            var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.red);
+            smallAUnlocked = false;
         }
     }
 }
