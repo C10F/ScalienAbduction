@@ -23,8 +23,10 @@ public class doorLogicUnlock : MonoBehaviour
         if(doorKeySnap.mediumUnlocked == true && doorKeySnap.smallAUnlocked == true && doorKeySnap.smallBUnlocked == true)
         {
             StartCoroutine(doorLightUp());
-            //var cubeRenderer = exitDoor.GetComponent<Renderer>();
-            //cubeRenderer.material.SetColor("_Color", Color.green);
+        }
+        if (doorKeySnap.mediumUnlocked == false || doorKeySnap.smallAUnlocked == false || doorKeySnap.smallBUnlocked == false)
+        {
+            StartCoroutine(doorLockUp());
         }
     }
 
@@ -41,9 +43,27 @@ public class doorLogicUnlock : MonoBehaviour
             {
                 var doorRenderer = exitDoor.GetComponent<Renderer>();
                 doorRenderer.material.SetColor("_Color", Color.green);
-                //transform.rotation = Quaternion.Euler(0, 125, 0);
 
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 125, 0), Time.deltaTime*speed);
+            }
+        }
+    }
+
+    IEnumerator doorLockUp()
+    {
+        for (int i = 0; i < floorDiodes.Count; i++)
+        {
+            var cubeRenderer = floorDiodes[i].GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.grey);
+
+            yield return new WaitForSeconds(0.1f);
+
+            if (i == floorDiodes.Count - 1)
+            {
+                var doorRenderer = exitDoor.GetComponent<Renderer>();
+                doorRenderer.material.SetColor("_Color", Color.red);
+
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
             }
         }
     }
