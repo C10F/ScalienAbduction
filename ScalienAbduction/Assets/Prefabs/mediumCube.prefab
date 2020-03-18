@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 5919681490158439676}
   - component: {fileID: 5919681490158439679}
   - component: {fileID: 5919681490158439678}
+  - component: {fileID: 544148181591518577}
+  - component: {fileID: 5266706064818398696}
   m_Layer: 8
   m_Name: mediumCube
   m_TagString: Medium Cube
@@ -176,3 +178,27 @@ MonoBehaviour:
   pCorrectionForce: 5
   pPointDistance: 4
   Collision: 0
+--- !u!114 &544148181591518577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919681490158439673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d10b1d8ac463cb469141918ddfffb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5266706064818398696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919681490158439673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5157ac4120fef1940b6a0c5e5390cc2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
