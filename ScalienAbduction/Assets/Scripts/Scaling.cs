@@ -24,43 +24,62 @@ public class Scaling : MonoBehaviour
     {
         Vector3 newScale = transform.localScale; // What is the current size?
 
-        if (newScale == smallCube && !overColliding)
+        if (scaleManager.currentScaleWeight < scaleManager._scaleUpperThreshold && newScale == smallCube && !overColliding)
         {
             transform.localScale = mediumCube;
             this.tag = "Medium Cube";
+            scaleManager.currentScaleWeight += 1;
+            Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
         }
 
-        if (newScale == mediumCube && !overColliding)
+        if (scaleManager.currentScaleWeight < scaleManager._scaleUpperThreshold && newScale == mediumCube && !overColliding)
         {
             transform.localScale = largeCube;
             this.tag = "Large Cube";
+            scaleManager.currentScaleWeight += 1;
+            Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
         }
 
-        if (newScale == largeCube && !overColliding)
+        if (scaleManager.currentScaleWeight < scaleManager._scaleUpperThreshold && newScale == largeCube && !overColliding)
         {
             Debug.Log("Cube is too large!");
         }
+
+        else if (scaleManager.currentScaleWeight == scaleManager._scaleUpperThreshold && (newScale == smallCube || newScale == mediumCube || newScale == largeCube) && !overColliding)
+        {
+            Debug.Log("You've exeeded the scaling threshold aka you got no juice left!");
+        }
+        
     }
 
     void downScale()
     {
         Vector3 newScale = transform.localScale; // What is the current size?
 
-        if (newScale == smallCube && !overColliding)
+        if (scaleManager.currentScaleWeight > scaleManager._scaleLowerThreshold && newScale == smallCube && !overColliding)
         {
             Debug.Log("Cube is too small!");
         }
 
-        if (newScale == mediumCube && !overColliding)
+        if (scaleManager.currentScaleWeight > scaleManager._scaleLowerThreshold && newScale == mediumCube && !overColliding)
         {
             transform.localScale = smallCube;
             this.tag = "Small Cube";
+            scaleManager.currentScaleWeight -= 1;
+            Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
         }
 
-        if (newScale == largeCube && !overColliding)
+        if (scaleManager.currentScaleWeight > scaleManager._scaleLowerThreshold && newScale == largeCube && !overColliding)
         {
             transform.localScale = mediumCube;
             this.tag = "Medium Cube";
+            scaleManager.currentScaleWeight -= 1;
+            Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
+        }
+
+        else if (scaleManager.currentScaleWeight == scaleManager._scaleLowerThreshold && (newScale == smallCube || newScale == mediumCube || newScale == largeCube) && !overColliding)
+        {
+            Debug.Log("You've reached the lower threshold aka you got no juice left!");
         }
     }
 

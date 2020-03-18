@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3870707186614437375}
   - component: {fileID: 3870707186614437374}
   - component: {fileID: 3479848415732132945}
+  - component: {fileID: 3681588899545925163}
   m_Layer: 8
   m_Name: smallCube
   m_TagString: Small Cube
@@ -187,5 +188,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5157ac4120fef1940b6a0c5e5390cc2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3681588899545925163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870707186614437369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d10b1d8ac463cb469141918ddfffb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
