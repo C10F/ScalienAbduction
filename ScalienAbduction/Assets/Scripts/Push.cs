@@ -17,7 +17,7 @@ public class Push : MonoBehaviour
     private void Start()
     {
         playerPosition = GameObject.Find("FPSCamera");
-        pushSpot = GameObject.Find("pushpot");
+        pushSpot = GameObject.Find("pushspot");
 }
 
     private void Update()
