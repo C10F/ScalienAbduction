@@ -44,7 +44,7 @@ public class doorLogicUnlock : MonoBehaviour
                 var doorRenderer = exitDoor.GetComponent<Renderer>();
                 doorRenderer.material.SetColor("_Color", Color.green);
 
-                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 125, 0), Time.deltaTime*speed);
+                transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 125, 0), Time.deltaTime*speed);
             }
         }
     }
@@ -63,7 +63,8 @@ public class doorLogicUnlock : MonoBehaviour
                 var doorRenderer = exitDoor.GetComponent<Renderer>();
                 doorRenderer.material.SetColor("_Color", Color.red);
 
-                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
+                transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
+                
             }
         }
     }

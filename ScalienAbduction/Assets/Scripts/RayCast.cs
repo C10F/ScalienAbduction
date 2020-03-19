@@ -35,16 +35,26 @@ public class RayCast : MonoBehaviour
                     else { TheHitBox = null; }
                 }
             }
-                if (Input.GetKeyDown("r") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube"))
+            if (Input.GetKeyDown("r") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube"))
+            {
+                //Run code when pressing 'r' on cube, scale up.
+                hit.transform.SendMessage("downScale");
+            }
+            if (Input.GetKeyDown("t") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube"))
+            {
+                //Run code when pressing 't' on cube, scale up.
+                hit.transform.SendMessage("upScale");
+            }
+
+            if (hit.transform.tag == "Drop Button") 
+            {
+                if (Input.GetKeyDown("e")) 
                 {
-                    //Run code when pressing 'r' on cube, scale up.
-                    hit.transform.SendMessage("downScale");
-                }
-                if (Input.GetKeyDown("t") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube"))
-                {
-                    //Run code when pressing 't' on cube, scale up.
-                    hit.transform.SendMessage("upScale");
+                    hit.transform.SendMessage("DropCubes");
                 }
             }
         }
+            
     }
+
+}

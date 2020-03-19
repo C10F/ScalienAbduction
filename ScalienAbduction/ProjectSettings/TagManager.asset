@@ -16,6 +16,7 @@ TagManager:
   - Medium Cube
   - Small Cube
   - Large Cube
+  - Drop Button
   layers:
   - Default
   - TransparentFX
