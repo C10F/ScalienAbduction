@@ -6,7 +6,7 @@ public class RayCast : MonoBehaviour
 {
     public RaycastHit hit; // To get information back from Raycast
     public GameObject TheHitBox; // To store the box that was hit
-
+    public int reach = 10;
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +15,7 @@ public class RayCast : MonoBehaviour
 
     void HitByRay()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance: 15)) // If the raycast strikes a collider within 15 distance
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance: reach)) // If the raycast strikes a collider within 15 distance
         {
             if (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube") // If object has suitable tag
             {
