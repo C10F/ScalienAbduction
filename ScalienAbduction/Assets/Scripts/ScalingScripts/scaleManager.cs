@@ -10,7 +10,8 @@ public class scaleManager : MonoBehaviour
     public static int _scaleLowerThreshold;
 
     public static int currentScaleWeight;
-
+    public GameObject[] cubes;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -21,6 +22,20 @@ public class scaleManager : MonoBehaviour
         Debug.Log("Upper scale threshold is set to: " + _scaleUpperThreshold);
 
         currentScaleWeight = ScaleWeight._scaleWeight;
-        Debug.Log("Current scale weight is: " + currentScaleWeight);
+    }
+
+    void FixedUpdate() 
+    {
+        if (currentScaleWeight != GetWeight()) currentScaleWeight = GetWeight();
+    }
+
+    int GetWeight() 
+    {
+        int temp = 0;
+        for (int i = 0; i < cubes.Length; i++) 
+        {
+            temp += cubes[i].GetComponent<ScaleWeight>().scaleWeight;
+        }
+        return temp;
     }
 }
