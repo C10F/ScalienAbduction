@@ -43,4 +43,4 @@ Material:
     m_Colors:
     - Color_B8AD7A35: {r: 0, g: 0, b: 0, a: 0}
     - Color_BSCEF074: {r: 1, g: 1, b: 1, a: 0}
-    - Color_E00173B0: {r: 1, g: 0, b: 0, a: 0}
+    - Color_E00173B0: {r: 0.06920862, g: 0.05918477, b: 0.13207549, a: 0}
