@@ -45,5 +45,12 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        // REMOVE LATER
+        if (Input.GetKeyUp(KeyCode.Escape)) Application.Quit();
+    }
+    void FixedUpdate() 
+    {
+        
     }
 }

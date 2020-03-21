@@ -10,6 +10,7 @@ public class HeadBob : MonoBehaviour
     public float bobSpeed = 4.8f; //how quickly the player's head bobs.
     public float bobAmount = 0.05f; //how dramatic the bob is. Increasing this in conjunction with bobSpeed gives a nice effect for sprinting.
     public bool LtRf;
+    bool crouched = false;
     bool hasPlayed, hasPlayed2;
     bool isGrounded;
     float timer = Mathf.PI / 2; //initialized as this value because this is where sin = 1. 
@@ -75,13 +76,23 @@ public class HeadBob : MonoBehaviour
             else { LtRf = false; hasPlayed = false; }
         }
 
-        //Debug.Log(stepTime);
+        // FOR CROUCH
 
+        
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+             crouched = true;
+        }
+        else { crouched = false; }
 
     }
 
     void FixedUpdate()
     {
-        transform.localPosition = camPos; // apply camPos at the end of each frame.    
+        if (crouched)
+        {
+            transform.localPosition = camPos + new Vector3(0f, -0.8f, 0f);
+        }
+        else { transform.localPosition = camPos; } // apply camPos at the end of each frame.    
     }
 }

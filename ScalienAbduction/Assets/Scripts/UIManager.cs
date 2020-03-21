@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
                 break;
             case 1:
                 Debug.Log("scene change pending..");
-                SceneManager.LoadScene("1stLevel_Test");
+                SceneManager.LoadScene("LEVEL_ONE");
                 break;
             default:
                 break;
