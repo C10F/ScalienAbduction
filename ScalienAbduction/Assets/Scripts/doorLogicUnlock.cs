@@ -35,14 +35,14 @@ public class doorLogicUnlock : MonoBehaviour
         for (int i = 0; i < floorDiodes.Count; i++)
         {
             var cubeRenderer = floorDiodes[i].GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_Color", Color.green);
+            cubeRenderer.material.SetColor("_BaseColor", Color.green);
 
             yield return new WaitForSeconds(0.1f);
 
             if (i == floorDiodes.Count-1)
             {
                 var doorRenderer = exitDoor.GetComponent<Renderer>();
-                doorRenderer.material.SetColor("_Color", Color.green);
+                doorRenderer.material.SetColor("_BaseColor", Color.green);
 
                 transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 125, 0), Time.deltaTime*speed);
             }
@@ -54,14 +54,14 @@ public class doorLogicUnlock : MonoBehaviour
         for (int i = 0; i < floorDiodes.Count; i++)
         {
             var cubeRenderer = floorDiodes[i].GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_Color", Color.grey);
+            cubeRenderer.material.SetColor("_BaseColor", Color.grey);
 
             yield return new WaitForSeconds(0.1f);
 
             if (i == floorDiodes.Count - 1)
             {
                 var doorRenderer = exitDoor.GetComponent<Renderer>();
-                doorRenderer.material.SetColor("_Color", Color.red);
+                doorRenderer.material.SetColor("_BaseColor", Color.red);
 
                 transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
             }
