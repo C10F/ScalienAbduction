@@ -35,6 +35,9 @@ public class PickUp : MonoBehaviour
             if (!pickedUp) // If object is not picked up
             {
                 GetComponent<Rigidbody>().mass = 1000000; // Make it heavy
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Remove constraints
+                GetComponent<Rigidbody>().useGravity = true; // Enable gravity
+                GetComponent<Rigidbody>().isKinematic = false;
             }
             if (pickedUp) // If object is picked up
             {
@@ -65,7 +68,7 @@ public class PickUp : MonoBehaviour
                     pickedUp = false; // Set pickup to false
                     GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Remove velocity on object
                 }
-            }
+            }          
             else // If none of the cases are true
             {
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Remove constraints
