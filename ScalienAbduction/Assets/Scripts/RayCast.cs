@@ -35,5 +35,8 @@ public class RayCast : MonoBehaviour
                     hit.transform.SendMessage("upScale"); // send message upScale
                 }
         }
+            
     }
+}
+
 }
