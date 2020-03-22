@@ -71,9 +71,21 @@ public class PickUp : MonoBehaviour
             }          
             else // If none of the cases are true
             {
-                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Remove constraints
-                GetComponent<Rigidbody>().useGravity = true; // Enable gravity
-                pickedUp = false; // Set pickedUp false
+                if (GameObject.FindGameObjectWithTag("Drop Button") != null)
+                {
+                    if (GameObject.FindGameObjectWithTag("Drop Button").GetComponent<dropButton>().frozenOnPurpose)
+                    {
+                        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY; // IF fixed on purpose by button
+                    }
+                }
+                else
+                {
+                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Remove constraints
+                }
+                    GetComponent<Rigidbody>().useGravity = true; // Enable gravity
+                    pickedUp = false; // Set pickedUp false 
+                
+                
             }
         }
     }

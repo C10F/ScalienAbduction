@@ -34,9 +34,14 @@ public class RayCast : MonoBehaviour
                 {
                     hit.transform.SendMessage("upScale"); // send message upScale
                 }
+
+            if (hit.transform.tag == "Drop Button") 
+            {
+                if(Input.GetKeyDown("e")) hit.transform.SendMessage("DropCubes");
+            }
         }
             
     }
 }
 
-}
+

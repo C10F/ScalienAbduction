@@ -12,9 +12,10 @@ public class doorLogicUnlock : MonoBehaviour
 
     public float speed = 1.5f;
 
-    private void Start()
+    void Start()
     {
         floorDiodes.AddRange(GameObject.FindGameObjectsWithTag("floorDiode"));
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 
     // Update is called once per frame
@@ -23,10 +24,12 @@ public class doorLogicUnlock : MonoBehaviour
         if(doorKeySnap.mediumUnlocked == true && doorKeySnap.smallAUnlocked == true && doorKeySnap.smallBUnlocked == true)
         {
             StartCoroutine(doorLightUp());
+            doorOpen = true;
         }
         if (doorKeySnap.mediumUnlocked == false || doorKeySnap.smallAUnlocked == false || doorKeySnap.smallBUnlocked == false)
         {
             StartCoroutine(doorLockUp());
+            doorOpen = false;
         }
     }
 

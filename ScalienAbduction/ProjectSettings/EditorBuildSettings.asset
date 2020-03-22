@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LEVEL_ONE.unity
     guid: df5d5e70d9f43644898f706cef94bcac
+  - enabled: 1
+    path: Assets/Scenes/playtest_tutorial.unity
+    guid: 83484d171d4342246b7bb2c599f42ad8
   m_configObjects: {}
