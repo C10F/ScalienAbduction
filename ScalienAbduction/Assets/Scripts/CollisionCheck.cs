@@ -17,6 +17,7 @@ public class CollisionCheck : MonoBehaviour
         {
             rigidbody.isKinematic = false;
         }
+        isColliding = false;
     }
 
     void LateUpdate()
@@ -25,18 +26,16 @@ public class CollisionCheck : MonoBehaviour
         {
             rigidbody.isKinematic = true;
         }
+        else
+        {
+            rigidbody.isKinematic = false;
+        }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionStay(Collision collision)
     {
         if (collision.collider.tag == "Player")
             isColliding = true;
         //.Log("Colliding");
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.tag == "Player")
-            isColliding = false;
-    }
+    }   
 }
