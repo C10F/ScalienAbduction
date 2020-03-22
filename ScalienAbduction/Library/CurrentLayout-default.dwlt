@@ -111,11 +111,19 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1920
+<<<<<<< HEAD
     height: 947
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
   controlID: 1188
+=======
+    height: 957
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 18194
+>>>>>>> playerControllerV3
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +148,11 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 1189
+=======
+  controlID: 18195
+>>>>>>> playerControllerV3
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +177,11 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 1190
+=======
+  controlID: 18196
+>>>>>>> playerControllerV3
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,8 +199,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 250
     height: 676
+=======
+    width: 249
+    height: 686
+>>>>>>> playerControllerV3
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -207,10 +228,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 250
+    x: 249
     y: 0
+<<<<<<< HEAD
     width: 1394
     height: 676
+=======
+    width: 1395
+    height: 686
+>>>>>>> playerControllerV3
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -297,10 +323,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 251
     y: 19
     width: 1392
     height: 655
+=======
+    x: 249
+    y: 73
+    width: 1393
+    height: 665
+>>>>>>> playerControllerV3
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewsNames: []
   m_SerializedViewsValues: []
@@ -308,7 +341,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 1392, y: 634}
+=======
+  m_TargetSize: {x: 1393, y: 644}
+>>>>>>> playerControllerV3
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -322,10 +359,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -960
     m_HBaseRangeMax: 960
     m_VBaseRangeMin: -453.5
     m_VBaseRangeMax: 453.5
+=======
+    m_HBaseRangeMin: -696.5
+    m_HBaseRangeMax: 696.5
+    m_VBaseRangeMin: -322
+    m_VBaseRangeMax: 322
+>>>>>>> playerControllerV3
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -334,7 +378,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -343,16 +387,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 1920
       height: 907
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 960, y: 453.5}
+=======
+      width: 1393
+      height: 644
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 696.5, y: 322}
+>>>>>>> playerControllerV3
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -960
       y: -453.5
       width: 1920
@@ -360,6 +412,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1920, y: 928}
+=======
+      x: -696.5
+      y: -322
+      width: 1393
+      height: 644
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1393, y: 665}
+>>>>>>> playerControllerV3
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -388,6 +449,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
+<<<<<<< HEAD
     width: 249
     height: 655
   m_ViewDataDictionary: {fileID: 0}
@@ -397,6 +459,17 @@ MonoBehaviour:
       m_SelectedIDs: 78470000
       m_LastClickedID: 18296
       m_ExpandedIDs: e0dfffff16460000
+=======
+    width: 248
+    height: 665
+  m_ViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b8c7fbff36c8fbffeecafbffe8cbfbff2cccfbff30ccfbff8cd5fbfff4d5fbffacd8fbffa6d9fbffead9fbffeed9fbff32e3fbffb0e3fbff68e6fbff62e7fbffa6e7fbffaae7fbfff8c2fcff0ce0ffff1ae0ffff54e1ffff4ae2ffffb2e2ffff20e4ffff1ae5ffff52e5ffff30e9ffff98e9ffff50ecffff4aedffff86edffff8aedffff02fbffff766e00004afb000076fb00008efb0000a8fb0000cafb0000201b01003a1b0100de260100f8260100
+>>>>>>> playerControllerV3
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -441,10 +514,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 250
+    x: 249
     y: 73
+<<<<<<< HEAD
     width: 1392
     height: 655
+=======
+    width: 1393
+    height: 665
+>>>>>>> playerControllerV3
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: dd8f2a5085513bd4ebbdb8fe2ac1bdb6
@@ -456,9 +534,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 40.576077, y: 74.404755, z: -113.06599}
+    m_Target: {x: 6.1500983, y: 8.603049, z: -6.811453}
     speed: 2
-    m_Value: {x: 40.576077, y: 74.404755, z: -113.06599}
+    m_Value: {x: 6.1500983, y: 8.603049, z: -6.811453}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,13 +582,19 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.13138282, y: -0.22554918, z: 0.03068429, w: 0.96502256}
+    m_Target: {x: 0.06116327, y: -0.0076605394, z: -0.00044539938, w: -0.99827516}
     speed: 2
-    m_Value: {x: -0.13138282, y: 0.22554918, z: -0.03068429, w: -0.96502256}
+    m_Value: {x: 0.06116327, y: -0.0076605394, z: -0.00044539938, w: -0.99827516}
   m_Size:
+<<<<<<< HEAD
     m_Target: 127.913445
     speed: 2
     m_Value: 127.913445
+=======
+    m_Target: 36.23038
+    speed: 2
+    m_Value: 37.937572
+>>>>>>> playerControllerV3
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -681,6 +765,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -688,13 +773,28 @@ MonoBehaviour:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Oliver\Documents\GitHub\ScalienAbduction\ScalienAbduction
+=======
+    - Assets/Scenes
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scenes
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: E:\Unity Projects\ScalienAbduction\ScalienAbduction
+>>>>>>> playerControllerV3
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 22}
+<<<<<<< HEAD
     m_SelectedIDs: 0e4b0000
     m_LastClickedID: 19214
     m_ExpandedIDs: 00000000c83c000000ca9a3b
+=======
+    m_SelectedIDs: 603f0000
+    m_LastClickedID: 16224
+    m_ExpandedIDs: 00000000863d000000ca9a3b
+>>>>>>> playerControllerV3
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -722,7 +822,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c83c000000ca9a3b
+=======
+    m_ExpandedIDs: 00000000863d000000ca9a3b
+>>>>>>> playerControllerV3
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -799,9 +903,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 741
-    width: 1515
+    x: 0
+    y: 759
+    width: 1643
     height: 250
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &21

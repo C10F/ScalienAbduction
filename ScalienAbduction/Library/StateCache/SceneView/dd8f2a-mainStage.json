@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":40.57607650756836,"y":74.40475463867188,"z":-113.06598663330078},"rotation":{"x":0.13138282299041749,"y":-0.22554917633533479,"z":0.03068429045379162,"w":0.9650225639343262},"size":127.91344451904297,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":6.1500983238220219,"y":8.603049278259278,"z":-6.811452865600586},"rotation":{"x":0.061163268983364108,"y":-0.0076605393551290039,"z":-0.000445399375166744,"w":-0.9982751607894898},"size":36.23038101196289,"orthographic":false}
+>>>>>>> playerControllerV3
