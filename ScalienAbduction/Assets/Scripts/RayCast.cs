@@ -5,7 +5,6 @@ using UnityEngine;
 public class RayCast : MonoBehaviour
 {
     public RaycastHit hit; // To get information back from Raycast
-    public GameObject TheHitBox; // To store the box that was hit
     public int reach = 10;
     // Update is called once per frame
     void Update()
@@ -21,13 +20,8 @@ public class RayCast : MonoBehaviour
             {
                 if (Input.GetKeyDown("e")) // If 'e' is pressed
                 {
-                    if (TheHitBox == null) // and if there is no GameObject stored in TheHitBox
-                    {
                         if(hit.transform.tag == "Small Cube") { hit.transform.SendMessage("pickUp"); } // If small cube, send pickup message
                         if (hit.transform.tag == "Medium Cube") { hit.transform.SendMessage("push"); } // If medium cube, send push message
-                        TheHitBox = hit.collider.gameObject; // Set TheHitBox gameObject to the gameObject of the hit collider
-                    }
-                    else { TheHitBox = null; } // If TheHitBox gameObject was not empty, make it empty.
                 }
             }
 
