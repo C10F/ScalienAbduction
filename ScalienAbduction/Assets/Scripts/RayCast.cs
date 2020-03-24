@@ -19,6 +19,8 @@ public class RayCast : MonoBehaviour
         {
             if (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube") // If object has suitable tag
             {
+                hit.transform.SendMessage("Highlight"); //if it hits a small or medium cube, send highlight message
+
                 if (Input.GetKeyDown("e")) // If 'e' is pressed
                 {
                         if(hit.transform.tag == "Small Cube") { hit.transform.SendMessage("pickUp"); } // If small cube, send pickup message
@@ -26,14 +28,14 @@ public class RayCast : MonoBehaviour
                 }
             }
 
-                if (Input.GetKeyDown("r") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 'r' is pressed
-                {
-                    hit.transform.SendMessage("downScale"); // send message downScale
-                }
-                if (Input.GetKeyDown("t") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 't' is pressed
-                {
-                    hit.transform.SendMessage("upScale"); // send message upScale
-                }
+            if (Input.GetKeyDown("r") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 'r' is pressed
+            {
+                hit.transform.SendMessage("downScale"); // send message downScale
+            }
+            if (Input.GetKeyDown("t") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 't' is pressed
+            {
+                hit.transform.SendMessage("upScale"); // send message upScale
+            }
 
             if (hit.transform.tag == "Drop Button") 
             {
