@@ -40,7 +40,9 @@ Material:
     - Vector1_DA09D7CB: 2
     - Vector1_EC7F03E5: 1
     - Vector1_FB0686C7: 3.2
+    - _ColorIntensity: 1
     m_Colors:
     - Color_B8AD7A35: {r: 0, g: 0, b: 0, a: 0}
     - Color_BSCEF074: {r: 1, g: 1, b: 1, a: 0}
     - Color_E00173B0: {r: 0.06920862, g: 0.05918477, b: 0.13207549, a: 0}
+    - _ColorTint: {r: 0.11320752, g: 0.052865773, b: 0.09560152, a: 0}

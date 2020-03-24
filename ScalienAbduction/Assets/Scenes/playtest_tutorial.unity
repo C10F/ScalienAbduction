@@ -709,6 +709,11 @@ PrefabInstance:
       propertyPath: pushSpot
       value: 
       objectReference: {fileID: 1872877800}
+    - target: {fileID: 542983630337354769, guid: ef07cfda84c22e94895db5f9631d2cae,
+        type: 3}
+      propertyPath: Collision
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 542983630337354773, guid: ef07cfda84c22e94895db5f9631d2cae,
         type: 3}
       propertyPath: m_Constraints
@@ -1537,6 +1542,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 685537365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1174780900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174780888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f838dbf9a1a741646a196b7f497c58d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisMat: {fileID: 2100000, guid: d0be17b24d381ba41ae1e6b7d0d71744, type: 2}
 --- !u!1 &1229229489
 GameObject:
   m_ObjectHideFlags: 0
