@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/LEVEL_ONE.unity
-=======
-- path: Assets/Scenes/MainMenu.unity
->>>>>>> microPolish
+- path: Assets/Scenes/playtest_tutorial.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

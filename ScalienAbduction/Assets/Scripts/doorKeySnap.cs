@@ -102,18 +102,18 @@ public class doorKeySnap : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "smallPreasurePlateA" || other.tag == "smallPreasurePlateB" || other.tag == "mediumPreasurePlate")
-        {
-            if (this.GetComponent<PickUp>().pickedUp == false)
-            {
-                Vector3 platePos = other.transform.position;
-                this.transform.localPosition = platePos;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "smallPreasurePlateA" || other.tag == "smallPreasurePlateB" || other.tag == "mediumPreasurePlate")
+    //    {
+    //        if (this.GetComponent<PickUp>().pickedUp == false)
+    //        {
+    //            Vector3 platePos = other.transform.position;
+    //            this.transform.localPosition = platePos + new Vector3(0,0.5f,0);
 
-                Quaternion plateRot = other.transform.rotation;
-                this.transform.localRotation = plateRot;
-            }
-        }
-    }
+    //            Quaternion plateRot = other.transform.rotation;
+    //            this.transform.localRotation = plateRot;
+    //        }
+    //    }
+    //}
 }
