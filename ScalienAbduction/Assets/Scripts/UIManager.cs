@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
         {
             case 0:
                 Debug.Log("opening settings..");
-                SceneManager.LoadScene("baseScene");
+                //SceneManager.LoadScene("baseScene");
                 break;
             case 1:
                 Debug.Log("scene change pending..");
