@@ -14,34 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 16}
+  - {fileID: 15}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< HEAD
-    width: 1920
-<<<<<<< HEAD
-    height: 947
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+    width: 2560
+    height: 1307
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 1030
-=======
-    height: 957
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
-  vertical: 0
-  controlID: 17997
->>>>>>> playerControllerV3
-=======
-    width: 1904
-    height: 941
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
-  vertical: 0
-  controlID: 12557
->>>>>>> level0_tutorial
+  controlID: 1786
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -63,24 +46,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 251
+    x: 228
     y: 19
-    width: 1392
-    height: 655
-=======
-    x: 249
-    y: 73
-    width: 1393
-    height: 665
->>>>>>> playerControllerV3
-=======
-    x: 377
-    y: 19
-    width: 1140
-    height: 548
->>>>>>> level0_tutorial
+    width: 2053
+    height: 1012
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewsNames: []
   m_SerializedViewsValues: []
@@ -88,46 +57,24 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_TargetSize: {x: 1392, y: 634}
-=======
-  m_TargetSize: {x: 1393, y: 644}
->>>>>>> playerControllerV3
-=======
-  m_TargetSize: {x: 1140, y: 527}
->>>>>>> level0_tutorial
+  m_TargetSize: {x: 2053, y: 991}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
   m_MaximizeOnPlay: 1
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_HBaseRangeMin: -696
-    m_HBaseRangeMax: 696
-    m_VBaseRangeMin: -317
-    m_VBaseRangeMax: 317
-=======
-    m_HBaseRangeMin: -696.5
-    m_HBaseRangeMax: 696.5
-    m_VBaseRangeMin: -322
-    m_VBaseRangeMax: 322
->>>>>>> playerControllerV3
-=======
-    m_HBaseRangeMin: -570
-    m_HBaseRangeMax: 570
-    m_VBaseRangeMin: -263.5
-    m_VBaseRangeMax: 263.5
->>>>>>> level0_tutorial
+    m_HBaseRangeMin: -1026.5
+    m_HBaseRangeMax: 1026.5
+    m_VBaseRangeMin: -495.5
+    m_VBaseRangeMax: 495.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -145,57 +92,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-<<<<<<< HEAD
-<<<<<<< HEAD
-      width: 1392
-      height: 634
+      width: 2053
+      height: 991
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 696, y: 317}
-=======
-      width: 1393
-      height: 644
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 696.5, y: 322}
->>>>>>> playerControllerV3
-=======
-      width: 1140
-      height: 527
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 570, y: 263.5}
->>>>>>> level0_tutorial
+    m_Translation: {x: 1026.5, y: 495.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-      x: -696
-      y: -317
-      width: 1392
-      height: 634
+      x: -1026.5
+      y: -495.5
+      width: 2053
+      height: 991
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1392, y: 655}
-=======
-      x: -696.5
-      y: -322
-      width: 1393
-      height: 644
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1393, y: 665}
->>>>>>> playerControllerV3
-=======
-      x: -570
-      y: -263.5
-      width: 1140
-      height: 527
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1140, y: 548}
->>>>>>> level0_tutorial
+  m_LastWindowPixelSize: {x: 2053, y: 1012}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -215,30 +128,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
-  - {fileID: 13}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1644
-    height: 947
-  m_MinSize: {x: 402, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+    width: 2282
+    height: 1307
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 1004
-=======
-  controlID: 17973
->>>>>>> playerControllerV3
-=======
-    width: 1518
-    height: 941
-  m_MinSize: {x: 402, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
-  vertical: 1
-  controlID: 12514
->>>>>>> level0_tutorial
+  controlID: 1787
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -258,25 +158,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1644
-    height: 676
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+    width: 2282
+    height: 1033
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 1005
-=======
-  controlID: 17974
->>>>>>> playerControllerV3
-=======
-    width: 1518
-    height: 569
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
-  vertical: 0
-  controlID: 12489
->>>>>>> level0_tutorial
+  controlID: 1788
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,22 +181,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 250
-    height: 676
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-=======
-    width: 249
-    height: 686
-=======
-    width: 376
-    height: 569
->>>>>>> level0_tutorial
+    width: 227
+    height: 1033
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
->>>>>>> playerControllerV3
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -336,37 +211,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 0
     y: 73
-<<<<<<< HEAD
-    width: 249
-    height: 655
-=======
-    width: 248
-    height: 665
->>>>>>> playerControllerV3
-=======
-    x: 8
-    y: 81
-    width: 375
-    height: 548
->>>>>>> level0_tutorial
+    width: 226
+    height: 1012
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-      m_ExpandedIDs: e0dfffff
-=======
-      m_ExpandedIDs: 8cd5fbfff4d5fbffacd8fbffa6d9fbffead9fbffeed9fbff32e3fbffb0e3fbff68e6fbff62e7fbffa6e7fbffaae7fbfff8c2fcff0ce0ffff1ae0ffff54e1ffff4ae2ffffb2e2ffff20e4ffff1ae5ffff52e5ffff30e9ffff98e9ffff50ecffff4aedffff86edffff8aedffff02fbffff766e00004afb000076fb00008efb0000a8fb0000cafb0000201b01003a1b0100
->>>>>>> playerControllerV3
-=======
-      m_ExpandedIDs: 50c1ffffecf9ffff16fafffffe340000
->>>>>>> level0_tutorial
+      m_ExpandedIDs: 3ab5ffff44c3ffff1cd0ffffb4dbffff5cf9ffff064b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -382,18 +237,14 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-<<<<<<< HEAD
-  m_WindowGUID: afe4d5a66cfb5e04ebb8bf01ac29989c
-=======
-  m_WindowGUID: 81125d23934f14e42bcecb5b75b8e160
->>>>>>> level0_tutorial
+  m_WindowGUID: 1fc793c35520d554aa551d8b04199cef
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -409,22 +260,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 249
+    x: 227
     y: 0
-<<<<<<< HEAD
-    width: 1394
-    height: 676
-=======
-    width: 1395
-    height: 686
->>>>>>> playerControllerV3
-=======
-    x: 376
-    y: 0
-    width: 1142
-    height: 569
->>>>>>> level0_tutorial
+    width: 2055
+    height: 1033
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
@@ -432,12 +271,6 @@ MonoBehaviour:
   - {fileID: 8}
   - {fileID: 2}
   - {fileID: 9}
-<<<<<<< HEAD
-  - {fileID: 10}
-  - {fileID: 11}
-  - {fileID: 12}
-=======
->>>>>>> level0_tutorial
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &8
@@ -461,28 +294,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 249
+    x: 227
     y: 73
-<<<<<<< HEAD
-    width: 1392
-    height: 655
-=======
-    width: 1393
-    height: 665
->>>>>>> playerControllerV3
+    width: 2053
+    height: 1012
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: dd8f2a5085513bd4ebbdb8fe2ac1bdb6
-=======
-    x: 384
-    y: 81
-    width: 1140
-    height: 548
-  m_ViewDataDictionary: {fileID: 0}
-  m_ShowContextualTools: 0
-  m_WindowGUID: b9dc2286f4ef4454da074d5b37153650
->>>>>>> level0_tutorial
+  m_WindowGUID: 0d77982df3e873642a8751c10818495c
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -491,15 +309,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: 6.1500983, y: 8.603049, z: -6.811453}
+    m_Target: {x: -24.353516, y: 11.595978, z: -164.32799}
     speed: 2
-    m_Value: {x: 6.1500983, y: 8.603049, z: -6.811453}
-=======
-    m_Target: {x: 33.52165, y: 26.91043, z: -10.584481}
-    speed: 2
-    m_Value: {x: 33.52165, y: 26.91043, z: -10.584481}
->>>>>>> level0_tutorial
+    m_Value: {x: -24.353516, y: 11.595978, z: -164.32799}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -545,29 +357,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-<<<<<<< HEAD
-    m_Target: {x: 0.06116327, y: -0.0076605394, z: -0.00044539938, w: -0.99827516}
+    m_Target: {x: -0.15943587, y: 0.68279463, z: -0.15649739, w: -0.6956157}
     speed: 2
-    m_Value: {x: 0.061152473, y: -0.007659187, z: -0.00044532077, w: -0.99809897}
+    m_Value: {x: -0.1594358, y: 0.68279433, z: -0.15649731, w: -0.69561535}
   m_Size:
-<<<<<<< HEAD
-    m_Target: 127.913445
+    m_Target: 452.0579
     speed: 2
-    m_Value: 127.913445
-=======
-    m_Target: 43.911755
-    speed: 2
-    m_Value: 43.911755
->>>>>>> playerControllerV3
-=======
-    m_Target: {x: -0.048802894, y: -0.6916239, z: 0.047008142, w: -0.71912783}
-    speed: 2
-    m_Value: {x: -0.048800945, y: -0.6915963, z: 0.047006264, w: -0.7190991}
-  m_Size:
-    m_Target: 34.55111
-    speed: 2
-    m_Value: 34.55111
->>>>>>> level0_tutorial
+    m_Value: 452.0579
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -627,79 +423,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924ffcbe75518854f97b48776d0f1939, type: 3}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Toon Shader
-    m_Image: {fileID: 2800000, guid: 7d62654fc399cc349a1ed7e0eab44ff0, type: 3}
-    m_Tooltip: 
-  m_Pos:
+  m_Children:
+  - {fileID: 11}
+  - {fileID: 13}
+  m_Position:
     serializedVersion: 2
-    x: 384
-    y: 81
-    width: 1138
-    height: 639
-  m_ViewDataDictionary: {fileID: 0}
-  m_Selected: 104cda1d631297a468ea452bb65a36a8
-  m_GraphObject: {fileID: 0}
+    x: 0
+    y: 1033
+    width: 2282
+    height: 274
+  m_MinSize: {x: 333, y: 271}
+  m_MaxSize: {x: 14003, y: 10021}
+  vertical: 0
+  controlID: 1751
 --- !u!114 &11
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924ffcbe75518854f97b48776d0f1939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Outline
-    m_Image: {fileID: 2800000, guid: 82b6560ff26e58d48aa33e2869ad14e4, type: 3}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 384
-    y: 81
-    width: 1138
-    height: 639
-  m_ViewDataDictionary: {fileID: 0}
-  m_Selected: bd6a1d2e832bd304e819f29db4de3402
-  m_GraphObject: {fileID: 0}
---- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924ffcbe75518854f97b48776d0f1939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Outline
-    m_Image: {fileID: 2800000, guid: 82b6560ff26e58d48aa33e2869ad14e4, type: 3}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 384
-    y: 81
-    width: 1138
-    height: 639
-  m_ViewDataDictionary: {fileID: 0}
-  m_Selected: 631fa94cf8e0a3840a8ef3bae7286990
-  m_GraphObject: {fileID: 0}
---- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,38 +449,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 676
-    width: 1644
-    height: 271
+    y: 0
+    width: 1224
+    height: 274
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 14}
-=======
-    y: 569
-    width: 1518
-    height: 372
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_ActualView: {fileID: 11}
->>>>>>> level0_tutorial
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 14}
-  - {fileID: 15}
+  - {fileID: 12}
   m_Selected: 0
-<<<<<<< HEAD
-  m_LastSelected: 1
---- !u!114 &14
-=======
   m_LastSelected: 0
---- !u!114 &11
->>>>>>> level0_tutorial
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -761,17 +486,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 0
-    y: 749
-    width: 1643
-    height: 250
-=======
-    x: 8
-    y: 650
-    width: 1517
-    height: 351
->>>>>>> level0_tutorial
+    y: 1106
+    width: 1223
+    height: 253
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -786,51 +504,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
-<<<<<<< HEAD
     - Assets/Scripts
-=======
-    - Assets/Scripts/TutorialScripts
->>>>>>> level0_tutorial
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/TutorialScripts
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
-<<<<<<< HEAD
-  m_LastProjectPath: C:\Users\Oliver\Documents\GitHub\ScalienAbduction\ScalienAbduction
-=======
-    - Assets/Scenes
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Scenes
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\Unity Projects\ScalienAbduction\ScalienAbduction
->>>>>>> playerControllerV3
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 22}
-<<<<<<< HEAD
-    m_SelectedIDs: 0e4b0000
-    m_LastClickedID: 19214
-    m_ExpandedIDs: 00000000c83c000000ca9a3b
-=======
-    m_SelectedIDs: 603f0000
-    m_LastClickedID: 16224
-    m_ExpandedIDs: 00000000863d000000ca9a3b
->>>>>>> playerControllerV3
-=======
-  m_LastProjectPath: E:\Unity Projects\ScalienAbduction\ScalienAbduction
+  m_LastProjectPath: C:\Users\nicol\Documents\GitKraken\ScalienAbduction\ScalienAbduction\ScalienAbduction
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6c7a0000
-    m_LastClickedID: 31340
-    m_ExpandedIDs: 00000000a2350000a4350000a635000000ca9a3b
->>>>>>> level0_tutorial
+    m_SelectedIDs: c0460000
+    m_LastClickedID: 18112
+    m_ExpandedIDs: 00000000d43c0000c0460000c246000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -846,7 +533,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -858,15 +545,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000c83c000000ca9a3b
-=======
-    m_ExpandedIDs: 00000000863d000000ca9a3b
->>>>>>> playerControllerV3
-=======
-    m_ExpandedIDs: 00000000a2350000a4350000a635000000ca9a3b
->>>>>>> level0_tutorial
+    m_ExpandedIDs: 00000000d43c0000c0460000c246000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -891,22 +570,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_SelectedInstanceIDs: 90380000
-    m_LastClickedInstanceID: 14480
-=======
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
->>>>>>> playerControllerV3
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000000000000
-=======
-    m_SelectedInstanceIDs: 84010000
-    m_LastClickedInstanceID: 388
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
->>>>>>> level0_tutorial
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -922,7 +589,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -934,7 +601,33 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115
---- !u!114 &15
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1224
+    y: 0
+    width: 1058
+    height: 274
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -955,19 +648,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
-    y: 759
-    width: 1643
-    height: 250
-=======
-    x: 8
-    y: 718
-    width: 1366
-    height: 308
->>>>>>> level0_tutorial
+    x: 1224
+    y: 1106
+    width: 1056
+    height: 253
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &16
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -982,32 +668,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1644
+    x: 2282
     y: 0
-    width: 276
-<<<<<<< HEAD
-    height: 947
-=======
-    height: 957
->>>>>>> playerControllerV3
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
-=======
-    x: 1518
-    y: 0
-    width: 386
-    height: 941
+    width: 278
+    height: 1307
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
->>>>>>> level0_tutorial
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &17
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1028,17 +700,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1644
+    x: 2282
     y: 73
-    width: 275
-    height: 926
-=======
-    x: 1526
-    y: 81
-    width: 385
-    height: 920
->>>>>>> level0_tutorial
+    width: 277
+    height: 1286
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -1050,13 +715,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_LastInspectedObjectInstanceID: 14480
-=======
   m_LastInspectedObjectInstanceID: -1
->>>>>>> playerControllerV3
-=======
-  m_LastInspectedObjectInstanceID: 388
->>>>>>> level0_tutorial
   m_LastVerticalScrollValue: 0

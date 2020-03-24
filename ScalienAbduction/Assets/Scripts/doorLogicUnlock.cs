@@ -8,8 +8,6 @@ public class doorLogicUnlock : MonoBehaviour
 
     public List<GameObject> floorDiodes = new List<GameObject>();
 
-    static bool doorOpen = false;
-
     public float speed = 1.5f;
 
     void Start()
@@ -24,12 +22,10 @@ public class doorLogicUnlock : MonoBehaviour
         if(doorKeySnap.mediumUnlocked == true && doorKeySnap.smallAUnlocked == true && doorKeySnap.smallBUnlocked == true)
         {
             StartCoroutine(doorLightUp());
-            doorOpen = true;
         }
         if (doorKeySnap.mediumUnlocked == false || doorKeySnap.smallAUnlocked == false || doorKeySnap.smallBUnlocked == false)
         {
             StartCoroutine(doorLockUp());
-            doorOpen = false;
         }
     }
 

@@ -20,6 +20,10 @@ public class doorKeySnap : MonoBehaviour
         mediumPreasurePlateRim = GameObject.FindGameObjectWithTag("mediumPreasurePlateRim");
         smallPreasurePlateRimA = GameObject.FindGameObjectWithTag("smallPreasurePlateRimA");
         smallPreasurePlateRimB = GameObject.FindGameObjectWithTag("smallPreasurePlateRimB");
+
+        mediumUnlocked = false;
+        smallAUnlocked = false;
+        smallBUnlocked = false;
     }
 
     // Update is called once per frame
