@@ -23,9 +23,7 @@ public class Scaling : MonoBehaviour
             {
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
-            //Debug.Log(transform.localScale.magnitude);
             }
-        Debug.Log("Loop is done!");
         yield return null;
     }
 
@@ -35,9 +33,7 @@ public class Scaling : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
-            //Debug.Log(transform.localScale.magnitude);
         }
-        Debug.Log("Loop is done!");
         yield return null;
     }
 
@@ -47,7 +43,6 @@ public class Scaling : MonoBehaviour
 
         if (this.transform.tag == "Large Cube")
         {
-            //Insert something?
             Debug.Log("Cube is too large!");
         }
 
@@ -57,10 +52,9 @@ public class Scaling : MonoBehaviour
             {
                 if (Mathf.Abs(transform.localScale.magnitude - mediumCube.magnitude) < delta)
                 {
-                    //transform.position = transform.position + new Vector3(0, 3, 0);
+                    this.tag = "Large Cube";
                     StartCoroutine(smoothUpscale(largeCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = l;
-                    this.tag = "Large Cube";
                 }
                 
                 //scaleManager.currentScaleWeight += 1;
@@ -76,10 +70,9 @@ public class Scaling : MonoBehaviour
             {
                 if (Mathf.Abs(transform.localScale.magnitude - smallCube.magnitude) < delta)
                 {
-                    //transform.position = transform.position + new Vector3(0, 1.5f, 0);
+                    this.tag = "Medium Cube";
                     StartCoroutine(smoothUpscale(mediumCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = m;
-                    this.tag = "Medium Cube";
                 }
                 //scaleManager.currentScaleWeight += 1;
                 //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
@@ -105,9 +98,9 @@ public class Scaling : MonoBehaviour
 
                 if (Mathf.Abs(transform.localScale.magnitude - mediumCube.magnitude) < delta)
                 {
+                    this.tag = "Small Cube";
                     StartCoroutine(smoothDownscale(smallCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = s;
-                    this.tag = "Small Cube";
                 }
                 //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
             }
@@ -122,9 +115,9 @@ public class Scaling : MonoBehaviour
                 //scaleManager.currentScaleWeight -= 1;
                 if (Mathf.Abs(transform.localScale.magnitude - largeCube.magnitude) < delta)
                 {
+                    this.tag = "Medium Cube";
                     StartCoroutine(smoothDownscale(mediumCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = m;
-                    this.tag = "Medium Cube";
                 }
                 //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
             }
