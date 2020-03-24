@@ -7,17 +7,9 @@ public class HighLight : MonoBehaviour
     bool highlight;
     float timer;
     public Material thisMat;
-    bool hold;
-
-    public GameObject playerPosition; // Position of The Player Object
-    public GameObject Hold; // Spot where cube should be
-
-
     private void Awake()
     {
         thisMat = gameObject.GetComponent<Renderer>().material;
-        hold = false;
-        Hold = GameObject.Find("hold");
     }
 
         // Update is called once per frame
