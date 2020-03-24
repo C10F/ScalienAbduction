@@ -1,6 +1,7 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.3.4f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.3.4f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 <<<<<<< HEAD
+<<<<<<< HEAD
 Cmd: preprocess
   insize=4582 outsize=619 ok=1
 Cmd: preprocess
@@ -9,3 +10,5 @@ Cmd: preprocess
   insize=27547 outsize=1928 ok=1
 =======
 >>>>>>> HighLight
+=======
+>>>>>>> scalingInterpolation
