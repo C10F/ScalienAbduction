@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         bStart.onClick.AddListener(() => ChangeScene(1));
         bSettings.onClick.AddListener(() => ChangeScene(0));
         bExit.onClick.AddListener(QuitApplication);
