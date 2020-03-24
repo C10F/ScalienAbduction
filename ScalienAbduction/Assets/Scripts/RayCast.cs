@@ -17,7 +17,7 @@ public class RayCast : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance: reach, layerMask)) // If the raycast strikes a collider within 15 distance
         {
-            if (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube") // If object has suitable tag
+            if (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube") // If object has suitable tag
             {
                 hit.transform.SendMessage("Highlight"); //if it hits a small or medium cube, send highlight message
 
