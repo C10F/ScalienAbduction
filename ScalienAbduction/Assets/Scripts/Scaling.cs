@@ -9,6 +9,8 @@ public class Scaling : MonoBehaviour
     Vector3 mediumCube = new Vector3(500f, 500f, 500f);
     Vector3 largeCube = new Vector3(1000f, 1000f, 1000f);
 
+    public bool canScale = true;
+
     public Vector3 velocity = Vector3.zero;
 
     float delta = 2f;
@@ -17,6 +19,10 @@ public class Scaling : MonoBehaviour
     int m = 2;
     int l = 3;
 
+    private void FixedUpdate()
+    {
+        canScale = true;
+    }
     IEnumerator smoothUpscale(Vector3 targetCube, float tempSmoothSpeed)
     {
         while (Mathf.Abs(transform.localScale.magnitude - targetCube.magnitude) > delta)
@@ -41,50 +47,54 @@ public class Scaling : MonoBehaviour
 
     void upScale()
     {
-        float smoothSpeed = 0.2f;
-
-        if (this.transform.tag == "Large Cube")
+        if (canScale)
         {
-            Debug.Log("Cube is too large!");
-        }
+            float smoothSpeed = 0.2f;
 
-        if (this.transform.tag == "Medium Cube")
-        {
-            if (scaleManager.currentScaleWeight < scaleManager._scaleUpperThreshold) 
+            if (this.transform.tag == "Large Cube")
             {
-                if (Mathf.Abs(transform.localScale.magnitude - mediumCube.magnitude) < delta)
-                {
-                    this.tag = "Large Cube";
-                    gameObject.GetComponent<PickUp>().ready = false;
-                    StartCoroutine(smoothUpscale(largeCube, smoothSpeed));
-                    this.GetComponent<ScaleWeight>().scaleWeight = l;
-                }
-                
-                //scaleManager.currentScaleWeight += 1;
-
-                //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
+                Debug.Log("Cube is too large!");
             }
 
-        }
-
-        if (this.transform.tag == "Small Cube")
-        {
-            if (scaleManager.currentScaleWeight < scaleManager._scaleUpperThreshold)
+            if (this.transform.tag == "Medium Cube")
             {
-                if (Mathf.Abs(transform.localScale.magnitude - smallCube.magnitude) < delta)
+                if (scaleManager.currentScaleWeight < scaleManager._scaleUpperThreshold)
                 {
-                    this.tag = "Medium Cube";
-                    gameObject.GetComponent<PickUp>().ready = false;
-                    StartCoroutine(smoothUpscale(mediumCube, smoothSpeed));
-                    this.GetComponent<ScaleWeight>().scaleWeight = m;
+                    if (Mathf.Abs(transform.localScale.magnitude - mediumCube.magnitude) < delta)
+                    {
+                        this.tag = "Large Cube";
+                        gameObject.GetComponent<PickUp>().ready = false;
+                        StartCoroutine(smoothUpscale(largeCube, smoothSpeed));
+                        this.GetComponent<ScaleWeight>().scaleWeight = l;
+                    }
+
+                    //scaleManager.currentScaleWeight += 1;
+
+                    //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
                 }
+
             }
 
+            if (this.transform.tag == "Small Cube")
+            {
+                if (scaleManager.currentScaleWeight < scaleManager._scaleUpperThreshold)
+                {
+                    if (Mathf.Abs(transform.localScale.magnitude - smallCube.magnitude) < delta)
+                    {
+                        this.tag = "Medium Cube";
+                        gameObject.GetComponent<PickUp>().ready = false;
+                        StartCoroutine(smoothUpscale(mediumCube, smoothSpeed));
+                        this.GetComponent<ScaleWeight>().scaleWeight = m;
+                    }
+                }
+
+            }
         }
     }
 
     void downScale()
     {
+        if (canScale) {
         float smoothSpeed = 0.2f;
 
         if (this.transform.tag == "Small Cube")
@@ -126,6 +136,21 @@ public class Scaling : MonoBehaviour
                 //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
             }
           
+        }
+        }
+    }
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.tag == "Player") {
+            canScale = false;
+            Debug.Log("Can not scale");
+        }      
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.tag == "Player") {
+            canScale = true;
+            Debug.Log("Can scale");
         }
     }
 }
