@@ -7,8 +7,9 @@ public class PickUp : MonoBehaviour
     public GameObject playerPosition; // Position of The Player Object
     public GameObject Hold; // Spot where cube should be
 
-    public bool pickedUp = false; // Boolean to track if object is picked up
-    public bool Collision = false; // Boolean to track if object is colliding
+    public bool pickedUp = false;   // Boolean to track if object is picked up
+    public bool ready = true;       // Boolean to track if object is scaling or ready
+    public bool Collision = false;  // Boolean to track if object is colliding
 
     public float mCorrectionForce = 20.0f; // Force used to correct path of object back to target position
 
@@ -92,7 +93,7 @@ public class PickUp : MonoBehaviour
 
     void pickUp() // When pickUp message recieved from RayCast.cs
     {
-        if (!pickedUp) // If pickedUp is false
+        if (!pickedUp && ready) // If pickedUp is false
         {
             pickedUp = true; // Set it true
             transform.position = Hold.transform.position; // Set position of object to target position

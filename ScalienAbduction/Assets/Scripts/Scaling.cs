@@ -24,6 +24,7 @@ public class Scaling : MonoBehaviour
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
             }
+        gameObject.GetComponent<PickUp>().ready = true;
         yield return null;
     }
 
@@ -34,6 +35,7 @@ public class Scaling : MonoBehaviour
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
         }
+        gameObject.GetComponent<PickUp>().ready = true;
         yield return null;
     }
 
@@ -53,6 +55,7 @@ public class Scaling : MonoBehaviour
                 if (Mathf.Abs(transform.localScale.magnitude - mediumCube.magnitude) < delta)
                 {
                     this.tag = "Large Cube";
+                    gameObject.GetComponent<PickUp>().ready = false;
                     StartCoroutine(smoothUpscale(largeCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = l;
                 }
@@ -71,11 +74,10 @@ public class Scaling : MonoBehaviour
                 if (Mathf.Abs(transform.localScale.magnitude - smallCube.magnitude) < delta)
                 {
                     this.tag = "Medium Cube";
+                    gameObject.GetComponent<PickUp>().ready = false;
                     StartCoroutine(smoothUpscale(mediumCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = m;
                 }
-                //scaleManager.currentScaleWeight += 1;
-                //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
             }
 
         }
@@ -99,6 +101,7 @@ public class Scaling : MonoBehaviour
                 if (Mathf.Abs(transform.localScale.magnitude - mediumCube.magnitude) < delta)
                 {
                     this.tag = "Small Cube";
+                    gameObject.GetComponent<PickUp>().ready = false;
                     StartCoroutine(smoothDownscale(smallCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = s;
                 }
@@ -116,6 +119,7 @@ public class Scaling : MonoBehaviour
                 if (Mathf.Abs(transform.localScale.magnitude - largeCube.magnitude) < delta)
                 {
                     this.tag = "Medium Cube";
+                    gameObject.GetComponent<PickUp>().ready = false;
                     StartCoroutine(smoothDownscale(mediumCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = m;
                 }
