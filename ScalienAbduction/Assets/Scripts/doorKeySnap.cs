@@ -60,23 +60,20 @@ public class doorKeySnap : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "mediumPreasurePlate" && other.isTrigger && gameObject.tag == "Medium Cube")
+        if (other.tag == "mediumPreasurePlate" && other.isTrigger && gameObject.tag == "Medium Cube" && this.GetComponent<PickUp>().pickedUp == false)
         {
-            //snapped = true;
-            //snapparent = other.gameObject;
-            //offset = transform.position - snapparent.transform.position; //store relation to parent
             var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.green);
             mediumUnlocked = true;
         }
 
-        if (other.tag == "smallPreasurePlateA" && other.isTrigger && gameObject.tag == "Small Cube")
+        if (other.tag == "smallPreasurePlateA" && other.isTrigger && gameObject.tag == "Small Cube" && this.GetComponent<PickUp>().pickedUp == false)
         {
             var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.green);
             smallAUnlocked = true;
         }
-        if (other.tag == "smallPreasurePlateB" && other.isTrigger && gameObject.tag == "Small Cube")
+        if (other.tag == "smallPreasurePlateB" && other.isTrigger && gameObject.tag == "Small Cube" && this.GetComponent<PickUp>().pickedUp == false)
         {
             var cubeRenderer = smallPreasurePlateRimB.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.green);
@@ -85,7 +82,7 @@ public class doorKeySnap : MonoBehaviour
 
         /////////////////////////////////////////////////////////////////////////////////////////////
 
-        if (other.tag == "mediumPreasurePlate" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Large Cube"))
+        if (other.tag == "mediumPreasurePlate" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Large Cube") && this.GetComponent<PickUp>().pickedUp == false)
         {
             var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
@@ -94,11 +91,23 @@ public class doorKeySnap : MonoBehaviour
 
         /////////////////////////////////////////////////////////////////////////////////////////////
 
-        if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
+        if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube") && this.GetComponent<PickUp>().pickedUp == false)
         {
             var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallAUnlocked = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (this.GetComponent<PickUp>().pickedUp == false)
+        {
+            Vector3 platePos = other.transform.position;
+            this.transform.localPosition = platePos;
+
+            Quaternion plateRot = other.transform.rotation;
+            this.transform.localRotation = plateRot;
         }
     }
 }

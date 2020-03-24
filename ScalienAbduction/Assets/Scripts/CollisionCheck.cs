@@ -37,5 +37,5 @@ public class CollisionCheck : MonoBehaviour
         if (collision.collider.tag == "Player")
             isColliding = true;
         //.Log("Colliding");
-    }   
+    }
 }

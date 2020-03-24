@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
     public GameObject Hold; // Spot where cube should be
 
     public bool pickedUp = false; // Boolean to track if object is picked up
+    public static bool holding = false;
     public bool Collision = false; // Boolean to track if object is colliding
 
     public float mCorrectionForce = 20.0f; // Force used to correct path of object back to target position
@@ -82,10 +83,8 @@ public class PickUp : MonoBehaviour
                 {
                     GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Remove constraints
                 }
-                    GetComponent<Rigidbody>().useGravity = true; // Enable gravity
-                    pickedUp = false; // Set pickedUp false 
-                
-                
+                GetComponent<Rigidbody>().useGravity = true; // Enable gravity
+                pickedUp = false; // Set pickedUp false
             }
         }
     }
