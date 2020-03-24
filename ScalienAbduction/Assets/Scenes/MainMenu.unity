@@ -913,7 +913,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: YOU HAVE BEEN ABDUCTED BY SCALING ALIENS. USE THEIR SCALING TECHNOLOGY
-    TO ESCAPE THE ALIEN SHIP, OR FACE YOU DESTINY..
+    TO ESCAPE THE ALIEN SHIP, OR FACE YOUR DESTINY..
 --- !u!222 &1143570431
 CanvasRenderer:
   m_ObjectHideFlags: 0
