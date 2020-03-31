@@ -3855,11 +3855,6 @@ PrefabInstance:
       propertyPath: pushSpot
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 542983630337354771, guid: ef07cfda84c22e94895db5f9631d2cae,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 542983630337354774, guid: ef07cfda84c22e94895db5f9631d2cae,
         type: 3}
       propertyPath: m_Name
