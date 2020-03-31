@@ -5,7 +5,7 @@ public class CollisionCheck : MonoBehaviour
     new Rigidbody rigidbody;
     public Vector3 position, velocity, angularVelocity;
     public bool isColliding;
-
+    public AudioClip[] dropS;
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -37,5 +37,14 @@ public class CollisionCheck : MonoBehaviour
         if (collision.collider.tag == "Player")
             isColliding = true;
         //.Log("Colliding");
-    }   
+    }
+
+    void OnCollisionEnter(Collision collision) 
+    {
+        int r = Random.Range(0,3);
+        if (collision.collider.tag != "Player") 
+        {
+            GetComponent<AudioSource>().PlayOneShot(dropS[r]);
+        }
+    }
 }

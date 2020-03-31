@@ -16,17 +16,18 @@ public class HeadBob : MonoBehaviour
     bool isGrounded;
     float timer = Mathf.PI / 2; //initialized as this value because this is where sin = 1. 
     Vector3 camPos;
-    AudioSource[] audio;
-    AudioSource[] steps;
-    AudioSource jump;
+    public GameObject SoundMgr;
+    public AudioSource audio;
+    AudioClip[] steps;
+    AudioClip[] jumps;
     //public AudioClip step1, step2, step3;
     
     void Awake()
     {
         camPos = transform.localPosition;
-        audio = gameObject.GetComponents<AudioSource>();
-        steps = new AudioSource[2] { audio[2], audio[3] };
-        jump = audio[0];
+        audio = gameObject.GetComponent<AudioSource>();
+        steps = SoundMgr.GetComponent<AudioClips>().clipType2;
+        jumps = SoundMgr.GetComponent<AudioClips>().clipType1;
     }
 
     void Update()
@@ -60,7 +61,8 @@ public class HeadBob : MonoBehaviour
         // FOR JUMPING
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            jump.PlayOneShot(jump.clip);
+            int i = Random.Range(0, jumps.Length - 1);
+            audio.PlayOneShot(jumps[i], 1f);
         }
         // FOR FOOTSTEPS
         else if (Input.GetAxisRaw("Horizontal") != 0 && isGrounded || Input.GetAxisRaw("Vertical") != 0 && isGrounded)
@@ -71,7 +73,7 @@ public class HeadBob : MonoBehaviour
                 if (!hasPlayed)
                 {
                     int i = Random.Range(0, steps.Length-1);
-                    steps[i].PlayOneShot(steps[i].clip);
+                    audio.PlayOneShot(steps[i], 0.1f);
                     hasPlayed = true;
                 }
             }
