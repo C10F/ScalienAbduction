@@ -10,7 +10,8 @@ public class HeadBob : MonoBehaviour
     public float bobSpeed = 4.8f; //how quickly the player's head bobs.
     public float bobAmount = 0.05f; //how dramatic the bob is. Increasing this in conjunction with bobSpeed gives a nice effect for sprinting.
     public bool LtRf;
-    bool crouched = false;
+    public float stepT = 0.06f;
+    public bool crouched = false;
     bool hasPlayed, hasPlayed2;
     bool isGrounded;
     float timer = Mathf.PI / 2; //initialized as this value because this is where sin = 1. 
@@ -35,11 +36,12 @@ public class HeadBob : MonoBehaviour
 
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) //moving
         {
-            timer += bobSpeed * Time.deltaTime;
+            
 
             //use the timer value to set the position
             //Vector3 newPosition = new Vector3(Mathf.Cos(timer) * (bobAmount * 0.35f), restPosition.y + Mathf.Abs((Mathf.Sin(timer) * Mathf.Lerp(0,bobAmount,transitionSpeed * Time.deltaTime))), restPosition.z); //abs val of y for a parabolic path (after lerp maybe not so much)
             Vector3 newPosition = new Vector3(Mathf.Cos(timer) * (bobAmount * 0.35f), restPosition.y + Mathf.Abs((Mathf.Sin(timer) * bobAmount)), restPosition.z); // little issue here with the start point.. try updating timer after this is called.
+            timer += bobSpeed * Time.deltaTime;
             camPos = newPosition;
         }
         else
@@ -63,7 +65,7 @@ public class HeadBob : MonoBehaviour
         // FOR FOOTSTEPS
         else if (Input.GetAxisRaw("Horizontal") != 0 && isGrounded || Input.GetAxisRaw("Vertical") != 0 && isGrounded)
         {
-            if (stepTime < -0.08 || stepTime > 0.08)
+            if (stepTime < -stepT || stepTime > stepT)
             {
                 LtRf = true;
                 if (!hasPlayed)
@@ -93,6 +95,6 @@ public class HeadBob : MonoBehaviour
         {
             transform.localPosition = camPos + new Vector3(0f, -0.8f, 0f);
         }
-        else { transform.localPosition = camPos; } // apply camPos at the end of each frame.    
+        else transform.localPosition = camPos;  // apply camPos at the end of each frame.    
     }
 }

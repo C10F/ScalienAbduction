@@ -5,8 +5,8 @@ using UnityEngine;
 public class Scaling : MonoBehaviour
 {
 
-    Vector3 smallCube = new Vector3(200.0f, 200.0f, 200.0f);
-    Vector3 mediumCube = new Vector3(520f, 520f, 520f);
+    Vector3 smallCube = new Vector3(250.0f, 250.0f, 250.0f);
+    Vector3 mediumCube = new Vector3(600f, 600f, 600f);
     Vector3 largeCube = new Vector3(1000f, 1000f, 1000f);
 
     public bool canScale = true;
