@@ -39,6 +39,7 @@ public class PickUp : MonoBehaviour
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Remove constraints
                 GetComponent<Rigidbody>().useGravity = true; // Enable gravity
                 GetComponent<Rigidbody>().isKinematic = false;
+
             }
             if (pickedUp) // If object is picked up
             {
@@ -98,6 +99,7 @@ public class PickUp : MonoBehaviour
             pickedUp = true; // Set it true
             transform.position = Hold.transform.position; // Set position of object to target position
             time = 0; // Reset time
+            this.GetComponent<CollisionCheck>().touchGround = false;
         }
     }
 
