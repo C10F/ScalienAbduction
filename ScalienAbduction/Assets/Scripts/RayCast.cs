@@ -28,11 +28,11 @@ public class RayCast : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown("r") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 'r' is pressed
+            if (Input.GetKeyDown(KeyCode.Mouse0) && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 'r' is pressed
             {
                 hit.transform.SendMessage("downScale"); // send message downScale
             }
-            if (Input.GetKeyDown("t") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 't' is pressed
+            if (Input.GetKeyDown(KeyCode.Mouse1) && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 't' is pressed
             {
                 hit.transform.SendMessage("upScale"); // send message upScale
             }

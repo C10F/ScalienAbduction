@@ -2105,6 +2105,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1710331543066915007, guid: 38ebc4db3e43d7247a1e437705ba6ae2,
+        type: 3}
+      propertyPath: BypassListenerEffects
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3339883821053534668, guid: 38ebc4db3e43d7247a1e437705ba6ae2,
         type: 3}
       propertyPath: Mute
@@ -2169,6 +2174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FpsController_NEW
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504190239646324529, guid: 38ebc4db3e43d7247a1e437705ba6ae2,
+        type: 3}
+      propertyPath: bobAmount
+      value: 0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38ebc4db3e43d7247a1e437705ba6ae2, type: 3}
@@ -2754,6 +2764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451751990626318384, guid: df2c7175eab6b094badf338e6cc9a01c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5846655850632160580, guid: df2c7175eab6b094badf338e6cc9a01c,
         type: 3}

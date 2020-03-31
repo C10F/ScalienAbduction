@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 6640018003615744645, guid: b551f4a7705092c478327d1129a61985,
         type: 3}
       propertyPath: jumpHeight
-      value: 3.159
+      value: 3.35
       objectReference: {fileID: 0}
     - target: {fileID: 6640018003615744646, guid: b551f4a7705092c478327d1129a61985,
         type: 3}
@@ -227,6 +227,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6802479648125802694, guid: b551f4a7705092c478327d1129a61985,
+        type: 3}
+      propertyPath: bobAmount
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6802479648125802694, guid: b551f4a7705092c478327d1129a61985,
+        type: 3}
+      propertyPath: LtRf
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b551f4a7705092c478327d1129a61985, type: 3}
