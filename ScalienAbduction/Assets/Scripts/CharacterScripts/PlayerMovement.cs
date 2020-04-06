@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     public bool isGrounded;
-    bool hasJumped = false;
     bool isSprinting;
     float oldBobAmount;
     float oldBobSpeed;
@@ -29,12 +28,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if (!isGrounded) hasJumped = true;
+
         if(isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
             if(controller.slopeLimit != 45) controller.slopeLimit = 45;
-            if(hasJumped)GameObject.Find("GroundCheck").SendMessage("LandOnGroundSound"); hasJumped = false;
 
         }
         float x = Input.GetAxis("Horizontal");
@@ -78,5 +76,4 @@ public class PlayerMovement : MonoBehaviour
     {
         
     }
-
 }

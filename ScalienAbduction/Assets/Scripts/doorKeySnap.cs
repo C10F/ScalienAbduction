@@ -42,7 +42,6 @@ public class doorKeySnap : MonoBehaviour
             var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             mediumUnlocked = false;
-            
         }
 
         if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
@@ -123,9 +122,6 @@ public class doorKeySnap : MonoBehaviour
                 Quaternion plateRot = other.transform.rotation;
                 this.transform.localRotation = plateRot;
             }
-
-            gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<CollisionCheck>().dropS[4], 3.0f);
-
         }
     }
 }
