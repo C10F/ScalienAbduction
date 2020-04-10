@@ -5,12 +5,12 @@ using UnityEngine;
 public class Scaling : MonoBehaviour
 {
 
-    Vector3 smallCube = new Vector3(200.0f, 200.0f, 200.0f);
-    Vector3 mediumCube = new Vector3(500f, 500f, 500f);
+    Vector3 smallCube = new Vector3(250.0f, 250.0f, 250.0f);
+    Vector3 mediumCube = new Vector3(600f, 600f, 600f);
     Vector3 largeCube = new Vector3(1000f, 1000f, 1000f);
 
     public bool canScale = true;
-
+    
     public Vector3 velocity = Vector3.zero;
 
     float delta = 2f;
