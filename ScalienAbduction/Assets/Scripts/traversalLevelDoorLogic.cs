@@ -26,7 +26,7 @@ public class traversalLevelDoorLogic : MonoBehaviour
         if (door)
         {
             float dist = Vector3.Distance(door.position, player.position);
-            print("Distance to other: " + dist);
+            //print("Distance to other: " + dist);
 
             if (dist < 90)
             {

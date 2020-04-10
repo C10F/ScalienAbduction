@@ -1216,6 +1216,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Small Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 4525095544761641504, guid: da856b1b84c588c49b37b5ea28a04ae2,
+        type: 3}
+      propertyPath: scaleWeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7463885130102807292, guid: da856b1b84c588c49b37b5ea28a04ae2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3369,6 +3374,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453872964}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &466733518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4065761284396165618, guid: da856b1b84c588c49b37b5ea28a04ae2,
+    type: 3}
+  m_PrefabInstance: {fileID: 142284131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &472015956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3948,12 +3959,12 @@ PrefabInstance:
         type: 3}
       propertyPath: cubes.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466733518}
     - target: {fileID: 3224727822274275394, guid: 533878679f7e9cc4fbec94f364de069f,
         type: 3}
       propertyPath: cubes.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1449683345}
     - target: {fileID: 3224727822274275394, guid: 533878679f7e9cc4fbec94f364de069f,
         type: 3}
       propertyPath: cubes.Array.data[2]
@@ -6559,6 +6570,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Small Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 4525095544761641504, guid: da856b1b84c588c49b37b5ea28a04ae2,
+        type: 3}
+      propertyPath: scaleWeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7463885130102807292, guid: da856b1b84c588c49b37b5ea28a04ae2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6597,7 +6613,7 @@ PrefabInstance:
     - target: {fileID: 7463885130102807292, guid: da856b1b84c588c49b37b5ea28a04ae2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7463885130102807292, guid: da856b1b84c588c49b37b5ea28a04ae2,
         type: 3}
@@ -10479,6 +10495,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447960720}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1449683345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4065761284396165618, guid: da856b1b84c588c49b37b5ea28a04ae2,
+    type: 3}
+  m_PrefabInstance: {fileID: 916098470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1455780359
 GameObject:
   m_ObjectHideFlags: 0
@@ -13815,7 +13837,7 @@ PrefabInstance:
     - target: {fileID: 4502193626207961186, guid: 327fb022002d12e4ea64578c97bc40e1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4502193626207961186, guid: 327fb022002d12e4ea64578c97bc40e1,
         type: 3}

@@ -143,14 +143,14 @@ public class Scaling : MonoBehaviour
     {
         if (collision.tag == "Player") {
             canScale = false;
-            Debug.Log("Can not scale");
+            //Debug.Log("Can not scale");
         }      
     }
     private void OnTriggerExit(Collider collision)
     {
         if (collision.tag == "Player") {
             canScale = true;
-            Debug.Log("Can scale");
+            //Debug.Log("Can scale");
         }
     }
 }
