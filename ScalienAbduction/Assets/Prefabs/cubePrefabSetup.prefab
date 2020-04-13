@@ -189,6 +189,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Medium Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 3870707186614437370, guid: c3c1205a9ecad0045aac8ccb0afdb464,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3870707186614437370, guid: c3c1205a9ecad0045aac8ccb0afdb464,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3870707186614437372, guid: c3c1205a9ecad0045aac8ccb0afdb464,
         type: 3}
       propertyPath: dropS.Array.size
