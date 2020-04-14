@@ -21,11 +21,15 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
   m_MinSize: {x: 875, y: 521}
 =======
   m_MinSize: {x: 875, y: 542}
 >>>>>>> folder structure prepared
+=======
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> assigningMaterials
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -48,6 +52,7 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1904
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     height: 931
   m_MinSize: {x: 578, y: 471}
@@ -61,6 +66,13 @@ MonoBehaviour:
   vertical: 0
   controlID: 106
 >>>>>>> folder structure prepared
+=======
+    height: 941
+  m_MinSize: {x: 677, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
+  vertical: 0
+  controlID: 106
+>>>>>>> assigningMaterials
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -79,12 +91,15 @@ MonoBehaviour:
     x: 1518
     y: 0
     width: 386
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     height: 931
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
 =======
+=======
+>>>>>>> assigningMaterials
     height: 941
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -111,6 +126,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     width: 376
     height: 563
@@ -118,6 +134,8 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
 =======
+=======
+>>>>>>> assigningMaterials
     width: 239
     height: 670
   m_MinSize: {x: 200, y: 200}
@@ -144,6 +162,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     y: 563
     width: 1518
@@ -153,6 +172,11 @@ MonoBehaviour:
     width: 1518
     height: 271
 >>>>>>> folder structure prepared
+=======
+    y: 670
+    width: 1518
+    height: 271
+>>>>>>> assigningMaterials
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -182,6 +206,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1904
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     height: 981
   m_MinSize: {x: 875, y: 521}
@@ -189,6 +214,10 @@ MonoBehaviour:
     height: 991
   m_MinSize: {x: 875, y: 300}
 >>>>>>> folder structure prepared
+=======
+    height: 991
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> assigningMaterials
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -228,11 +257,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     y: 961
 =======
     y: 971
 >>>>>>> folder structure prepared
+=======
+    y: 971
+>>>>>>> assigningMaterials
     width: 1904
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -257,6 +290,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1518
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     height: 931
   m_MinSize: {x: 302, y: 471}
@@ -264,6 +298,10 @@ MonoBehaviour:
     height: 941
   m_MinSize: {x: 402, y: 492}
 >>>>>>> folder structure prepared
+=======
+    height: 941
+  m_MinSize: {x: 402, y: 492}
+>>>>>>> assigningMaterials
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 35
@@ -287,6 +325,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1518
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     height: 563
   m_MinSize: {x: 302, y: 200}
@@ -294,6 +333,10 @@ MonoBehaviour:
     height: 670
   m_MinSize: {x: 402, y: 221}
 >>>>>>> folder structure prepared
+=======
+    height: 670
+  m_MinSize: {x: 402, y: 221}
+>>>>>>> assigningMaterials
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
   controlID: 36
@@ -312,6 +355,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     x: 376
     y: 0
@@ -319,6 +363,8 @@ MonoBehaviour:
     height: 563
   m_MinSize: {x: 102, y: 121}
 =======
+=======
+>>>>>>> assigningMaterials
     x: 239
     y: 0
     width: 1279
@@ -328,6 +374,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
+<<<<<<< HEAD
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 15}
@@ -421,6 +468,14 @@ MonoBehaviour:
 --- !u!114 &15
 =======
 >>>>>>> folder structure prepared
+=======
+  - {fileID: 16}
+  - {fileID: 17}
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &12
+>>>>>>> assigningMaterials
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,6 +540,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     - Assets/Shader
   m_ViewMode: 1
@@ -498,22 +554,35 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Materials/Model_Materials
 >>>>>>> folder structure prepared
+=======
+    - Assets/Materials/Model_Materials
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Materials/Model_Materials
+>>>>>>> assigningMaterials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Unity Projects\ScalienAbduction\ScalienAbduction
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     scrollPos: {x: 0, y: 45}
     m_SelectedIDs: b43d0000
     m_LastClickedID: 15796
     m_ExpandedIDs: 00000000a83c0000b23d0000b43d000000ca9a3b
 =======
+=======
+>>>>>>> assigningMaterials
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: cc440000
     m_LastClickedID: 17612
     m_ExpandedIDs: 00000000aa3c0000b43d0000b63d0000be3d0000ee3d0000cc44000000ca9a3b
+<<<<<<< HEAD
 >>>>>>> folder structure prepared
+=======
+>>>>>>> assigningMaterials
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -541,11 +610,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     m_ExpandedIDs: 00000000a83c0000b23d0000b43d0000
 =======
     m_ExpandedIDs: 00000000aa3c0000b43d0000b63d0000
 >>>>>>> folder structure prepared
+=======
+    m_ExpandedIDs: 00000000aa3c0000b43d0000b63d0000
+>>>>>>> assigningMaterials
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -573,11 +646,15 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     m_ExpandedInstanceIDs: c6230000
 =======
     m_ExpandedInstanceIDs: c623000000000000
 >>>>>>> folder structure prepared
+=======
+    m_ExpandedInstanceIDs: c623000000000000
+>>>>>>> assigningMaterials
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,9 +682,12 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
 --- !u!114 &17
 =======
+=======
+>>>>>>> assigningMaterials
 --- !u!114 &14
 >>>>>>> folder structure prepared
 MonoBehaviour:
@@ -633,11 +713,15 @@ MonoBehaviour:
     x: 1526
     y: 81
     width: 385
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     height: 910
 =======
     height: 920
 >>>>>>> folder structure prepared
+=======
+    height: 920
+>>>>>>> assigningMaterials
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -674,6 +758,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 8
     y: 81
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     width: 375
     height: 542
@@ -681,10 +766,15 @@ MonoBehaviour:
     width: 238
     height: 649
 >>>>>>> folder structure prepared
+=======
+    width: 238
+    height: 649
+>>>>>>> assigningMaterials
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
       m_SelectedIDs: 36020000
       m_LastClickedID: 0
@@ -694,6 +784,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 28f7ffff9ef7ffff00f8ffff6cf9ffff3c410000504100006e410000c2410000
 >>>>>>> folder structure prepared
+=======
+      m_SelectedIDs: ea440000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 28f7ffff9ef7ffff00f8ffff6cf9ffff3c410000504100006e410000c2410000
+>>>>>>> assigningMaterials
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -716,6 +811,7 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
   m_WindowGUID: 010b8ffb2a9961547a83dd042a7261a0
 --- !u!114 &19
@@ -723,6 +819,10 @@ MonoBehaviour:
   m_WindowGUID: bc429e347cd7e9949b3ac98066c94836
 --- !u!114 &16
 >>>>>>> folder structure prepared
+=======
+  m_WindowGUID: bc429e347cd7e9949b3ac98066c94836
+--- !u!114 &16
+>>>>>>> assigningMaterials
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -743,6 +843,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     x: 384
     y: 81
@@ -752,6 +853,8 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 1ef01b88599601a43bbcee10b950de9b
 =======
+=======
+>>>>>>> assigningMaterials
     x: 247
     y: 81
     width: 1277
@@ -759,7 +862,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 14715083bd92cca43b03da73435e6c31
+<<<<<<< HEAD
 >>>>>>> folder structure prepared
+=======
+>>>>>>> assigningMaterials
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -768,6 +874,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     m_Target: {x: -29.096363, y: 118.8365, z: -149.05516}
     speed: 2
@@ -777,6 +884,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 18.74395, y: 89.38478, z: -139.4055}
 >>>>>>> folder structure prepared
+=======
+    m_Target: {x: 18.74395, y: 89.38478, z: -139.4055}
+    speed: 2
+    m_Value: {x: 18.74395, y: 89.38478, z: -139.4055}
+>>>>>>> assigningMaterials
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -822,6 +934,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     m_Target: {x: -0.1737141, y: -0.78493863, z: 0.25344017, w: -0.53803396}
     speed: 2
@@ -831,6 +944,8 @@ MonoBehaviour:
     speed: 2
     m_Value: 10.42884
 =======
+=======
+>>>>>>> assigningMaterials
     m_Target: {x: 0.14116934, y: 0.6615172, z: -0.12885232, w: 0.7252194}
     speed: 2
     m_Value: {x: 0.1411637, y: 0.6614908, z: -0.12884718, w: 0.72519046}
@@ -838,7 +953,10 @@ MonoBehaviour:
     m_Target: 103.86224
     speed: 2
     m_Value: 103.94471
+<<<<<<< HEAD
 >>>>>>> folder structure prepared
+=======
+>>>>>>> assigningMaterials
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -863,11 +981,15 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
 --- !u!114 &20
 =======
 --- !u!114 &17
 >>>>>>> folder structure prepared
+=======
+--- !u!114 &17
+>>>>>>> assigningMaterials
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -888,17 +1010,23 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     x: 384
     y: 81
     width: 1140
     height: 542
 =======
+=======
+>>>>>>> assigningMaterials
     x: 247
     y: 81
     width: 1277
     height: 649
+<<<<<<< HEAD
 >>>>>>> folder structure prepared
+=======
+>>>>>>> assigningMaterials
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewsNames: []
   m_SerializedViewsValues: []
@@ -906,11 +1034,15 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
   m_TargetSize: {x: 1140, y: 521}
 =======
   m_TargetSize: {x: 1277, y: 628}
 >>>>>>> folder structure prepared
+=======
+  m_TargetSize: {x: 1277, y: 628}
+>>>>>>> assigningMaterials
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -924,17 +1056,23 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
     m_HBaseRangeMin: -570
     m_HBaseRangeMax: 570
     m_VBaseRangeMin: -260.5
     m_VBaseRangeMax: 260.5
 =======
+=======
+>>>>>>> assigningMaterials
     m_HBaseRangeMin: -638.5
     m_HBaseRangeMax: 638.5
     m_VBaseRangeMin: -314
     m_VBaseRangeMax: 314
+<<<<<<< HEAD
 >>>>>>> folder structure prepared
+=======
+>>>>>>> assigningMaterials
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -952,23 +1090,30 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
       width: 1140
       height: 521
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 570, y: 260.5}
 =======
+=======
+>>>>>>> assigningMaterials
       width: 1277
       height: 628
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 638.5, y: 314}
+<<<<<<< HEAD
 >>>>>>> folder structure prepared
+=======
+>>>>>>> assigningMaterials
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/RemodellingLvls
       x: -570
       y: -260.5
@@ -978,6 +1123,8 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1140, y: 542}
 =======
+=======
+>>>>>>> assigningMaterials
       x: -638.5
       y: -314
       width: 1277
@@ -985,7 +1132,10 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1277, y: 649}
+<<<<<<< HEAD
 >>>>>>> folder structure prepared
+=======
+>>>>>>> assigningMaterials
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
