@@ -1511,6 +1511,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorLogic Level 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4383485566845821194, guid: 9ae860912e674dd4aab499bb5ff5c8b0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 956a942060d4b204196ee0cc9cc67c9b, type: 2}
     - target: {fileID: 5526637034965545297, guid: 9ae860912e674dd4aab499bb5ff5c8b0,
         type: 3}
       propertyPath: m_LocalPosition.x
