@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HighLight : MonoBehaviour
 {
+    Color enable = new Color(0, 1, 0, 0.4f);
+    Color disable = new Color(1, 1, 1, 0.1f);
     bool highlight;
     float timer;
     public Material thisMat;
@@ -22,7 +24,7 @@ public class HighLight : MonoBehaviour
             if (timer > 0.2)
             {
                 highlight = false;
-                thisMat.SetColor("_ColorTint", Color.white);
+                thisMat.SetColor("_BaseColor", disable);
             }
         }
     }
@@ -33,7 +35,7 @@ public class HighLight : MonoBehaviour
         if (!highlight) // If highlight is false
         {
             highlight = true;
-            thisMat.SetColor("_ColorTint", Color.green);
+            thisMat.SetColor("_BaseColor", enable);
         }
     }
 
