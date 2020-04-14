@@ -19,5 +19,9 @@ public class BoxCore : MonoBehaviour
         {
             this.transform.Rotate(1f, 6f, 1f, Space.Self);
         }
+        if (transform.parent.parent.GetComponent<doorKeySnap>().snapped)
+        {
+            this.transform.Rotate(5f, 10f, 5f, Space.Self);
+        }
     }
 }

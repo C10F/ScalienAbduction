@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class doorKeySnap : MonoBehaviour
 {
-    bool snapped = false;
+    public bool snapped = false;
     GameObject snapparent;
     Vector3 offset;
     //public GameObject preasurePlate;
@@ -45,6 +45,7 @@ public class doorKeySnap : MonoBehaviour
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             mediumUnlocked = false;
             scaleManager.GetComponent<scaleManager>().onPlate = false;
+            snapped = false;
         }
 
         if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
@@ -53,6 +54,7 @@ public class doorKeySnap : MonoBehaviour
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallAUnlocked = false;
             scaleManager.GetComponent<scaleManager>().onPlate = false;
+            snapped = false;
         }
 
         if (other.tag == "smallPreasurePlateB" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
@@ -61,6 +63,7 @@ public class doorKeySnap : MonoBehaviour
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallBUnlocked = false;
             scaleManager.GetComponent<scaleManager>().onPlate = false;
+            snapped = false;
         }
     }
 
@@ -68,7 +71,7 @@ public class doorKeySnap : MonoBehaviour
     {
         if (other.tag == "mediumPreasurePlate" && other.isTrigger && gameObject.tag == "Medium Cube" && this.GetComponent<PickUp>().pickedUp == false)
         {
-            //snapped = true;
+            snapped = true;
             //snapparent = other.gameObject;
             //offset = transform.position - snapparent.transform.position; //store relation to parent
             var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
@@ -78,12 +81,14 @@ public class doorKeySnap : MonoBehaviour
 
         if (other.tag == "smallPreasurePlateA" && other.isTrigger && gameObject.tag == "Small Cube" && this.GetComponent<PickUp>().pickedUp == false)
         {
+            snapped = true;
             var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.green);
             smallAUnlocked = true;
         }
         if (other.tag == "smallPreasurePlateB" && other.isTrigger && gameObject.tag == "Small Cube" && this.GetComponent<PickUp>().pickedUp == false)
         {
+            snapped = true;
             var cubeRenderer = smallPreasurePlateRimB.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.green);
             smallBUnlocked = true;
@@ -93,6 +98,7 @@ public class doorKeySnap : MonoBehaviour
 
         if (other.tag == "mediumPreasurePlate" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Large Cube") && this.GetComponent<PickUp>().pickedUp == false)
         {
+            snapped = true;
             var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             mediumUnlocked = false;
@@ -102,6 +108,7 @@ public class doorKeySnap : MonoBehaviour
 
         if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube") && this.GetComponent<PickUp>().pickedUp == false)
         {
+            snapped = true;
             var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallAUnlocked = false;
