@@ -28,7 +28,7 @@ public class doorLogicUnlock : MonoBehaviour
             StartCoroutine(doorLockUp());
         }
     }
-
+     
     IEnumerator doorLightUp()
     {
         for (int i = 0; i < floorDiodes.Count; i++)

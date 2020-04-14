@@ -41,6 +41,12 @@ public class RayCast : MonoBehaviour
             {
                 if(Input.GetKeyDown("e")) hit.transform.SendMessage("DropCubes");
             }
+
+            // This is for opening the doors with a button on level 4
+            if (hit.transform.tag == "Door Button")
+            {
+                if (Input.GetKeyDown("e")) hit.transform.SendMessage("OpenDoor");
+            }
         }
             
     }
