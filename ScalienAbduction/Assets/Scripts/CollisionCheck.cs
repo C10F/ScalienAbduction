@@ -22,7 +22,7 @@ public class CollisionCheck : MonoBehaviour
 
     void LateUpdate()
     {
-        if (isColliding)
+        if (isColliding && !this.GetComponent<PickUp>().pickedUp)
         {
             rigidbody.isKinematic = true;
         }
