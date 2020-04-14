@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class scaleManager : MonoBehaviour
 {
+    public bool onPlate = false;
     public int scaleUpperThreshold;
     public int scaleLowerThreshold;
     public static int _scaleUpperThreshold;

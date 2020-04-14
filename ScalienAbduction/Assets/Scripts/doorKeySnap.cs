@@ -11,6 +11,7 @@ public class doorKeySnap : MonoBehaviour
     GameObject mediumPreasurePlateRim;
     GameObject smallPreasurePlateRimA;
     GameObject smallPreasurePlateRimB;
+    GameObject scaleManager;
     public static bool mediumUnlocked = false;
     public static bool smallAUnlocked = false;
     public static bool smallBUnlocked = false;
@@ -20,6 +21,7 @@ public class doorKeySnap : MonoBehaviour
         mediumPreasurePlateRim = GameObject.FindGameObjectWithTag("mediumPreasurePlateRim");
         smallPreasurePlateRimA = GameObject.FindGameObjectWithTag("smallPreasurePlateRimA");
         smallPreasurePlateRimB = GameObject.FindGameObjectWithTag("smallPreasurePlateRimB");
+        scaleManager = GameObject.Find("ScaleManager");
 
         mediumUnlocked = false;
         smallAUnlocked = false;
@@ -42,7 +44,7 @@ public class doorKeySnap : MonoBehaviour
             var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             mediumUnlocked = false;
-            
+            scaleManager.GetComponent<scaleManager>().onPlate = false;
         }
 
         if (other.tag == "smallPreasurePlateA" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
@@ -50,12 +52,15 @@ public class doorKeySnap : MonoBehaviour
             var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallAUnlocked = false;
+            scaleManager.GetComponent<scaleManager>().onPlate = false;
         }
+
         if (other.tag == "smallPreasurePlateB" && other.isTrigger && (gameObject.tag == "Small Cube" || gameObject.tag == "Medium Cube" || gameObject.tag == "Large Cube"))
         {
             var cubeRenderer = smallPreasurePlateRimB.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallBUnlocked = false;
+            scaleManager.GetComponent<scaleManager>().onPlate = false;
         }
     }
 
@@ -107,8 +112,9 @@ public class doorKeySnap : MonoBehaviour
     {
         if ((other.tag == "smallPreasurePlateA" || other.tag == "smallPreasurePlateB" || other.tag == "mediumPreasurePlate") && this.transform.tag != "Large Cube")
         {
-            if (this.GetComponent<PickUp>().pickedUp == false)
+            if (this.GetComponent<PickUp>().pickedUp == false && scaleManager.GetComponent<scaleManager>().onPlate == false)
             {
+                scaleManager.GetComponent<scaleManager>().onPlate = true;
                 Vector3 platePos = other.transform.position;
                 if(this.transform.tag=="Small Cube")
                 {

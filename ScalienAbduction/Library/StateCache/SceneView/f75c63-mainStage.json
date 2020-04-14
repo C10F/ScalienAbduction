@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":140.80540466308595,"y":73.77276611328125,"z":-149.4437713623047},"rotation":{"x":-0.07895316928625107,"y":-0.6970465183258057,"z":0.07769838720560074,"w":-0.7084220051765442},"size":273.5579833984375,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":67.34944915771485,"y":4.609439849853516,"z":-43.98571014404297},"rotation":{"x":0.06200823932886124,"y":0.9379709959030151,"z":-0.24450714886188508,"w":0.23790588974952699},"size":63.53030776977539,"orthographic":false}
+>>>>>>> RemodellingLvls
