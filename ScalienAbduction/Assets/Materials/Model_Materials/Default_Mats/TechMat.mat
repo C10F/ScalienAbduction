@@ -8,14 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TechMat
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 104cda1d631297a468ea452bb65a36a8,
+    type: 3}
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -48,10 +48,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _albedo:
+        m_Texture: {fileID: 2800000, guid: 1ad2fd50857fc1442be84a1ecfa46e30, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _lightingRamp:
+        m_Texture: {fileID: 2800000, guid: b5d61b642b04c544ea66fa89c87530e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 0.37
+    - _ColorIntensity: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
@@ -63,18 +72,27 @@ Material:
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.555
+    - _Smoothness: 1.79
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _depthSensitivity: 0.26
+    - _hue: 0
+    - _normalsSensitivity: 1
+    - _outlineThickness: 2.1
     m_Colors:
+    - Vector2_323BB3CF: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_D53B706F: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.501187, g: 0.14070843, b: 0.9622642, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ColorTint: {r: 0.3139614, g: 0.18534178, b: 0.46226418, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 0}
+    - _colorOutline: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1626904485542624743
 MonoBehaviour:
   m_ObjectHideFlags: 11
