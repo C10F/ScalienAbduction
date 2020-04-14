@@ -10,6 +10,8 @@ public class Scaling : MonoBehaviour
     Vector3 largeCube = new Vector3(1000f, 1000f, 1000f);
 
     public bool canScale = true;
+
+    public bool isScaling = false;
     
     public Vector3 velocity = Vector3.zero;
 
@@ -27,10 +29,12 @@ public class Scaling : MonoBehaviour
     {
         while (Mathf.Abs(transform.localScale.magnitude - targetCube.magnitude) > delta)
             {
+            isScaling = true;
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
             }
         gameObject.GetComponent<PickUp>().ready = true;
+        isScaling = false;
         yield return null;
     }
 
@@ -38,10 +42,12 @@ public class Scaling : MonoBehaviour
     {
         while (Mathf.Abs(transform.localScale.magnitude - targetCube.magnitude) > delta)
         {
+            isScaling = true;
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
         }
         gameObject.GetComponent<PickUp>().ready = true;
+        isScaling = false;
         yield return null;
     }
 
