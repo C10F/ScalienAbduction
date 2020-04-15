@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ThingyMat
-  m_Shader: {fileID: -6465566751694194690, guid: 104cda1d631297a468ea452bb65a36a8,
+  m_Shader: {fileID: -6465566751694194690, guid: 86729848cf34e064a8a11f033629d161,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,6 +33,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_54ED2325:
+        m_Texture: {fileID: 2800000, guid: 9de0bfd2dbcd7ef43a67be5f15cfc1db, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_84FB9F1A:
+        m_Texture: {fileID: 2800000, guid: b06771653864baa41adc63eee4418df9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -70,6 +78,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_32A481C9: 1
+    - Vector1_429E52E2: 4
+    - Vector1_9F227598: 1
+    - Vector1_A6760AF5: 0
+    - Vector1_BBE8D84: 5
+    - Vector1_E9523BBA: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -97,7 +111,11 @@ Material:
     - _normalsSensitivity: 5
     - _outlineThickness: 1
     m_Colors:
+    - Color_82C0483B: {r: 0, g: 0, b: 0, a: 0}
+    - Color_FC3E1F2B: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_323BB3CF: {r: 15, g: 10, b: 0, a: 0}
+    - Vector2_7EE4E527: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_9BE523DC: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_D53B706F: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
