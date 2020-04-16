@@ -9,7 +9,7 @@ public class doorLogicUnlock : MonoBehaviour
 
     public List<GameObject> floorDiodes = new List<GameObject>();
 
-    public float speed = 1.5f;
+    public float speed = 5f;
 
     void Start()
     {
@@ -35,16 +35,16 @@ public class doorLogicUnlock : MonoBehaviour
         for (int i = 0; i < floorDiodes.Count; i++)
         {
             var cubeRenderer = floorDiodes[i].GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_BaseColor", Color.green);
+            //cubeRenderer.material.SetColor("_Tint", Color.green);
 
             yield return new WaitForSeconds(0.1f);
 
             if (i == floorDiodes.Count-1)
             {
-                var doorRenderer = exitDoorRight.GetComponent<Renderer>();
-                doorRenderer.material.SetColor("_BaseColor", Color.green);
+                var doorRendererRight = exitDoorRight.GetComponentInChildren<Renderer>();
+                doorRendererRight.material.SetColor("_Tint", Color.green);
 
-                transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 125, 0), Time.deltaTime*speed);
+                exitDoorLeft.transform.localPosition = Vector3.Lerp(transform.position, transform.position + new Vector3(-10, 0, 0) , Time.deltaTime*speed);
             }
         }
     }
@@ -54,14 +54,14 @@ public class doorLogicUnlock : MonoBehaviour
         for (int i = 0; i < floorDiodes.Count; i++)
         {
             var cubeRenderer = floorDiodes[i].GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_BaseColor", Color.grey);
+            cubeRenderer.material.SetColor("_Tint", Color.white);
 
             yield return new WaitForSeconds(0.1f);
 
             if (i == floorDiodes.Count - 1)
             {
                 var doorRenderer = exitDoorRight.GetComponent<Renderer>();
-                doorRenderer.material.SetColor("_BaseColor", Color.red);
+                //doorRenderer.material.SetColor("_BaseColor", Color.red);
 
                 transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
             }
