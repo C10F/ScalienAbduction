@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class doorLogicUnlock : MonoBehaviour
 {
-    public GameObject exitDoor;
+    public GameObject exitDoorLeft;
+    public GameObject exitDoorRight;
 
     public List<GameObject> floorDiodes = new List<GameObject>();
 
@@ -40,7 +41,7 @@ public class doorLogicUnlock : MonoBehaviour
 
             if (i == floorDiodes.Count-1)
             {
-                var doorRenderer = exitDoor.GetComponent<Renderer>();
+                var doorRenderer = exitDoorRight.GetComponent<Renderer>();
                 doorRenderer.material.SetColor("_BaseColor", Color.green);
 
                 transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 125, 0), Time.deltaTime*speed);
@@ -59,7 +60,7 @@ public class doorLogicUnlock : MonoBehaviour
 
             if (i == floorDiodes.Count - 1)
             {
-                var doorRenderer = exitDoor.GetComponent<Renderer>();
+                var doorRenderer = exitDoorRight.GetComponent<Renderer>();
                 doorRenderer.material.SetColor("_BaseColor", Color.red);
 
                 transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
