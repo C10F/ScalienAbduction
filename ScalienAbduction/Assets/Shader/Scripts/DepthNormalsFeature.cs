@@ -49,7 +49,7 @@ public class DepthNormalsFeature : ScriptableRendererFeature
         {
             CommandBuffer cmd = CommandBufferPool.Get(m_ProfilerTag);
 
-            using (new ProfilingSample(cmd, m_ProfilerTag))
+            using (new ProfilingScope(cmd, null))
             {
                 context.ExecuteCommandBuffer(cmd);
                 cmd.Clear();
