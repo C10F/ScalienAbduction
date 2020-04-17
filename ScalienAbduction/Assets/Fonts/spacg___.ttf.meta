@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d8337730aff90e548b7d4a880e6a9b0e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Space Gothic
+  fontNames:
+  - Space Gothic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c2a0c260c3f089f4494e53ec5e51cbcc, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
