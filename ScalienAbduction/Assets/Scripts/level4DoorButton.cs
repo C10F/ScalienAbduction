@@ -8,6 +8,7 @@ public class level4DoorButton : MonoBehaviour
     public GameObject door2;
 
     public List<GameObject> floorDiodes = new List<GameObject>();
+    public List<GameObject> door2FloorDiodes = new List<GameObject>();
 
     public float speed = 1f;
     private int doorDis = 2; //Door Displacement
@@ -20,6 +21,7 @@ public class level4DoorButton : MonoBehaviour
     void Start()
     {
         floorDiodes.AddRange(GameObject.FindGameObjectsWithTag("floorDiode"));
+        door2FloorDiodes.AddRange(GameObject.FindGameObjectsWithTag("Door2Light"));
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class level4DoorButton : MonoBehaviour
         if (Input.GetKeyDown("j"))
         {
             StartCoroutine(TurnOnOffDiodes());
+            StartCoroutine(TurnOnOffDiodesDoor2());
         }
 
         if (door1Done && door2Done)
@@ -35,6 +38,7 @@ public class level4DoorButton : MonoBehaviour
             StopCoroutine(door1Unlock());
             StopCoroutine(door2Unlock());
             StopCoroutine(TurnOnOffDiodes());
+            StopCoroutine(TurnOnOffDiodesDoor2());
         }
     }
 
@@ -45,16 +49,39 @@ public class level4DoorButton : MonoBehaviour
             floorDiodes[i].GetComponent<Renderer>().material.SetColor("_Tint", Color.green);
 
             yield return new WaitForSeconds(0.1f);
+
             if (i == floorDiodes.Count - 1)
             {
                 StartCoroutine(door1Unlock());
+                break;
+            }
+        }
+
+        while (!door1Done || !door2Done)
+        {
+            Debug.Log("DiodesWhileLoop");
+            yield return null;
+        }
+        yield return new WaitForSeconds(3f);
+
+    }
+
+    IEnumerator TurnOnOffDiodesDoor2()
+    {
+        for (int i = 0; i < door2FloorDiodes.Count; i++)
+        {
+            door2FloorDiodes[i].GetComponent<Renderer>().material.SetColor("_Tint", Color.green);
+            yield return new WaitForSeconds(0.1f);
+
+            if (i == door2FloorDiodes.Count - 1)
+            {
                 StartCoroutine(door2Unlock());
                 break;
             }
         }
+
         while (!door1Done || !door2Done)
         {
-            Debug.Log("DiodesWhileLoop");
             yield return null;
         }
         yield return new WaitForSeconds(3f);
@@ -65,7 +92,6 @@ public class level4DoorButton : MonoBehaviour
     {
 
         doorDisSpotRight = door1.transform.localPosition - new Vector3(doorDis, 0, 0);
-        Debug.Log(doorDisSpotRight);
         while (door1.transform.localPosition != doorDisSpotRight)
         {
             door1.transform.localPosition = Vector3.Lerp(door1.transform.localPosition, doorDisSpotRight, Time.deltaTime * speed);
@@ -73,7 +99,6 @@ public class level4DoorButton : MonoBehaviour
         }
         while (!door1Done || !door2Done)
         {
-            Debug.Log("Door1UnlockWhileLoop");
             if (!door1Done)
             {
                 door1Done = true;
@@ -93,7 +118,6 @@ public class level4DoorButton : MonoBehaviour
         }
         while (!door1Done || !door2Done)
         {
-            Debug.Log("DoorUnlock2WhileLoop");
             if (!door2Done)
             {
                 door2Done = true;

@@ -18,6 +18,7 @@ TagManager:
   - Large Cube
   - Drop Button
   - Door Button
+  - Door2Light
   layers:
   - Default
   - TransparentFX
