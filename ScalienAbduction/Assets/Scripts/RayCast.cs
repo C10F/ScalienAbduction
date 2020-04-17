@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RayCast : MonoBehaviour
 {
+    public level4DoorButton doorButtonScript;
     public RaycastHit hit; // To get information back from Raycast
     public int reach = 10;
     int layerMask = ~(1 << 9);
@@ -43,10 +44,11 @@ public class RayCast : MonoBehaviour
             }
 
             // This is for opening the doors with a button on level 4
-            if (hit.transform.tag == "Door Button")
+            /*if (hit.transform.tag == "Door Button")
             {
-                if (Input.GetKeyDown("e")) hit.transform.SendMessage("OpenDoor");
+                if (Input.GetKeyDown("e")) hit.transform.SendMessage("TurnOnOffDiodes");
             }
+            */
         }
             
     }

@@ -9,8 +9,8 @@ public class level4DoorButton : MonoBehaviour
 
     public List<GameObject> floorDiodes = new List<GameObject>();
 
-    public float speed = 5f;
-    private int doorDis = 10; //Door Displacement
+    public float speed = 1f;
+    private int doorDis = 2; //Door Displacement
     private Vector3 doorDisSpotRight;
     private Vector3 doorDisSpotLeft;
 
@@ -25,9 +25,8 @@ public class level4DoorButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!open)
+        if (Input.GetKeyDown("j"))
         {
-
             StartCoroutine(TurnOnOffDiodes());
         }
 
@@ -55,6 +54,7 @@ public class level4DoorButton : MonoBehaviour
         }
         while (!door1Done || !door2Done)
         {
+            Debug.Log("DiodesWhileLoop");
             yield return null;
         }
         yield return new WaitForSeconds(3f);
@@ -65,6 +65,7 @@ public class level4DoorButton : MonoBehaviour
     {
 
         doorDisSpotRight = door1.transform.localPosition - new Vector3(doorDis, 0, 0);
+        Debug.Log(doorDisSpotRight);
         while (door1.transform.localPosition != doorDisSpotRight)
         {
             door1.transform.localPosition = Vector3.Lerp(door1.transform.localPosition, doorDisSpotRight, Time.deltaTime * speed);
@@ -72,6 +73,7 @@ public class level4DoorButton : MonoBehaviour
         }
         while (!door1Done || !door2Done)
         {
+            Debug.Log("Door1UnlockWhileLoop");
             if (!door1Done)
             {
                 door1Done = true;
@@ -83,14 +85,15 @@ public class level4DoorButton : MonoBehaviour
 
     IEnumerator door2Unlock()
     {
-        doorDisSpotRight = door2.transform.localPosition - new Vector3(doorDis, 0, 0);
-        while (door2.transform.localPosition != doorDisSpotRight)
+        doorDisSpotLeft = door2.transform.localPosition - new Vector3(doorDis, 0, 0);
+        while (door2.transform.localPosition != doorDisSpotLeft)
         {
-            door2.transform.localPosition = Vector3.Lerp(door2.transform.localPosition, doorDisSpotRight, Time.deltaTime * speed);
+            door2.transform.localPosition = Vector3.Lerp(door2.transform.localPosition, doorDisSpotLeft, Time.deltaTime * speed);
             yield return null;
         }
         while (!door1Done || !door2Done)
         {
+            Debug.Log("DoorUnlock2WhileLoop");
             if (!door2Done)
             {
                 door2Done = true;

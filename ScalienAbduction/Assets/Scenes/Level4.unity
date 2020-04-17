@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 4502193626207961186, guid: 327fb022002d12e4ea64578c97bc40e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -42.27
+      value: -39.5
       objectReference: {fileID: 0}
     - target: {fileID: 4502193626207961186, guid: 327fb022002d12e4ea64578c97bc40e1,
         type: 3}
@@ -299,7 +299,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &504375769
 Transform:
@@ -579,8 +579,6 @@ GameObject:
   - component: {fileID: 802409063}
   - component: {fileID: 802409062}
   - component: {fileID: 802409061}
-  - component: {fileID: 802409065}
-  - component: {fileID: 802409066}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Door Button
@@ -662,35 +660,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &802409065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802409060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26b712aaa8d34741aaa78fc260aa4a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 802409060}
---- !u!114 &802409066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802409060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6a85aec0720014593e5ba21e172342, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door1: {fileID: 0}
-  door2: {fileID: 0}
-  floorDiodes: []
-  speed: 5
 --- !u!1 &980593192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,7 +1902,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 7c9002565d32f724a83b8e99412af556, type: 3}
+  - {fileID: 2100000, guid: 2ccdf54dd766d1944909035123e661d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2040,7 +2009,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 7c9002565d32f724a83b8e99412af556, type: 3}
+  - {fileID: 2100000, guid: 2ccdf54dd766d1944909035123e661d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2109,13 +2078,30 @@ GameObject:
   - component: {fileID: 5554067686246561536}
   - component: {fileID: 6322319066599939190}
   - component: {fileID: 1336938807504174168}
+  - component: {fileID: 5405355094215643597}
   m_Layer: 0
   m_Name: doorCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5405355094215643597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5405355094215643596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6a85aec0720014593e5ba21e172342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door1: {fileID: 5405355094215643596}
+  door2: {fileID: 504375768}
+  floorDiodes: []
+  speed: 5
 --- !u!33 &5554067686246561536
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2199,7 +2185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 7c9002565d32f724a83b8e99412af556, type: 3}
+  - {fileID: 2100000, guid: 2ccdf54dd766d1944909035123e661d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2299,7 +2285,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 7c9002565d32f724a83b8e99412af556, type: 3}
+  - {fileID: 2100000, guid: 2ccdf54dd766d1944909035123e661d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2374,7 +2360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 7c9002565d32f724a83b8e99412af556, type: 3}
+  - {fileID: 2100000, guid: 2ccdf54dd766d1944909035123e661d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
