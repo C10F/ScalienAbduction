@@ -125,10 +125,12 @@ public class doorKeySnap : MonoBehaviour
                 Vector3 platePos = other.transform.position;
                 if(this.transform.tag=="Small Cube")
                 {
+                    this.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0f);
                     this.transform.localPosition = platePos + new Vector3(0, 1.5f, 0);
                 }
                 if (this.transform.tag == "Medium Cube")
                 {
+                    this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0f);
                     this.transform.localPosition = platePos + new Vector3(0, 2.5f, 0);
                 }
                 GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
@@ -137,7 +139,7 @@ public class doorKeySnap : MonoBehaviour
                 this.transform.localRotation = plateRot;
             }
 
-            gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<CollisionCheck>().dropS[4], 3.0f);
+            gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<CollisionCheck>().dropS[4]);
 
         }
     }

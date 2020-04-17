@@ -115,7 +115,7 @@ public class doorLogicUnlock : MonoBehaviour
             yield return null;
         }
        
-        yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(3f);
     }
 
     IEnumerator LeftDoorOpenLock()
@@ -146,6 +146,6 @@ public class doorLogicUnlock : MonoBehaviour
             }
             yield return null;
         }
-        yield return new WaitForSeconds(3f);
+       // yield return new WaitForSeconds(3f);
     }
 }
