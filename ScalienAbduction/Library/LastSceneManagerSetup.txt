@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/LEVEL_ONE.unity
-=======
-- path: Assets/Scenes/traversalLevel/traversalLevel.unity
->>>>>>> traversalFinal2
+- path: Assets/Scenes/MainMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
