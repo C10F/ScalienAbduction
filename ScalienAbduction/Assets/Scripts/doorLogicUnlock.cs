@@ -93,7 +93,6 @@ public class doorLogicUnlock : MonoBehaviour
             doorDisSpotRight = exitDoorRight.transform.localPosition - new Vector3(doorDis, 0, 0);
             while (exitDoorRight.transform.localPosition != doorDisSpotRight)
             {
-                Debug.Log("DoorDisSpot " + doorDisSpotRight + "  andcurrent position");
                 exitDoorRight.transform.localPosition = Vector3.Lerp(exitDoorRight.transform.localPosition, doorDisSpotRight, Time.deltaTime * speed);
                 yield return null;
             }
