@@ -121,11 +121,11 @@ public class doorKeySnap : MonoBehaviour
                 Vector3 platePos = other.transform.position;
                 if(this.transform.tag=="Small Cube")
                 {
-                    this.transform.localPosition = platePos + new Vector3(0, 1.5f, 0);
+                    this.transform.position = platePos + new Vector3(0, 1.5f, 0);
                 }
                 if (this.transform.tag == "Medium Cube")
                 {
-                    this.transform.localPosition = platePos + new Vector3(0, 2.5f, 0);
+                    this.transform.position = platePos + new Vector3(0, 2.5f, 0);
                 }
 
                 Quaternion plateRot = other.transform.rotation;

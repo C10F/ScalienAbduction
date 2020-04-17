@@ -4201,7 +4201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3928012084320773155}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00018692017, y: -4.7710037, z: -29.065405}
+  m_LocalPosition: {x: 0.00018692017, y: -4.771004, z: -29.065405}
   m_LocalScale: {x: 5, y: 0.5, z: 5}
   m_Children: []
   m_Father: {fileID: 1230969701077721240}
@@ -4233,6 +4233,7 @@ GameObject:
   - component: {fileID: 8194549007386953539}
   - component: {fileID: 1571915034375798635}
   - component: {fileID: 1246999398390157153}
+  - component: {fileID: 3928012084320773156}
   m_Layer: 0
   m_Name: platformPlate_Medium
   m_TagString: mediumPreasurePlate
@@ -4240,6 +4241,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3928012084320773156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928012084320773155}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1.07, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &4088208121766123073
 MeshFilter:
   m_ObjectHideFlags: 0
