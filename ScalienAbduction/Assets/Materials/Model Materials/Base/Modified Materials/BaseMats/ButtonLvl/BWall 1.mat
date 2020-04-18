@@ -99,7 +99,7 @@ Material:
     - Color_FC3E1F2B: {r: 0.60000825, g: 0.53017086, b: 0.6981132, a: 0}
     - Vector2_32C61B31: {r: 10, g: 30, b: 0, a: 0}
     - Vector2_663EE48E: {r: 0, g: 0, b: 0, a: 0}
-    - Vector2_7EE4E527: {r: 5, g: 1, b: 0, a: 0}
+    - Vector2_7EE4E527: {r: 6, g: 1, b: 0, a: 0}
     - Vector2_9BE523DC: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}

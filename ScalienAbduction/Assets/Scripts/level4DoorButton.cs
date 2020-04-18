@@ -11,7 +11,7 @@ public class level4DoorButton : MonoBehaviour
     public List<GameObject> door2FloorDiodes = new List<GameObject>();
 
     public float speed = 1f;
-    private int doorDis = 2; //Door Displacement
+    private int doorDis = 5; //Door Displacement
     private Vector3 doorDisSpotRight;
     private Vector3 doorDisSpotLeft;
 
