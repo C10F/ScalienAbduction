@@ -24,8 +24,8 @@ public class dropButton : MonoBehaviour
 
     public void DropCubes()
     {
-        Color oldCol = gameObject.GetComponent<Renderer>().material.GetColor("_BaseColor");
-        gameObject.GetComponent<Renderer>().material.SetColor("_BaseColor", Color.green);
+        Color oldCol = gameObject.GetComponent<Renderer>().material.GetColor("_Tint");
+        gameObject.GetComponent<Renderer>().material.SetColor("_Tint", Color.green);
         frozenOnPurpose = false;
         //yield return new WaitForSeconds(5);
         //gameObject.GetComponent<Renderer>().material.SetColor("_Color", oldCol);
@@ -36,7 +36,7 @@ public class dropButton : MonoBehaviour
     IEnumerator ChangeCol(Color now, int time, GameObject target) 
     {
         yield return new WaitForSeconds(time);
-        target.GetComponent<Renderer>().material.SetColor("_BaseColor", now);
+        target.GetComponent<Renderer>().material.SetColor("_Tint", now);
     }
 
 }

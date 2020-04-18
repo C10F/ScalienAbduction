@@ -28,18 +28,24 @@ public class RayCast : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown("r") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 'r' is pressed
+            if (Input.GetKeyDown(KeyCode.Mouse0) && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 'r' is pressed
             {
                 hit.transform.SendMessage("downScale"); // send message downScale
             }
-            if (Input.GetKeyDown("t") && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 't' is pressed
+            if (Input.GetKeyDown(KeyCode.Mouse1) && (hit.transform.tag == "Small Cube" || hit.transform.tag == "Medium Cube" || hit.transform.tag == "Large Cube")) // If suitable tag and 't' is pressed
             {
                 hit.transform.SendMessage("upScale"); // send message upScale
             }
-
+            // This is for opening the doors with a button on level 2
             if (hit.transform.tag == "Drop Button") 
             {
                 if(Input.GetKeyDown("e")) hit.transform.SendMessage("DropCubes");
+            }
+
+            // This is for opening the doors with a button on level 4
+            if (hit.transform.tag == "Door Button")
+            {
+                if (Input.GetKeyDown("e")) hit.transform.SendMessage("OpenDoor");
             }
         }
             

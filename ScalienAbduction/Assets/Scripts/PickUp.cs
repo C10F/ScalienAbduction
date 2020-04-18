@@ -46,12 +46,6 @@ public class PickUp : MonoBehaviour
                 GetComponent<Rigidbody>().mass = 1; // Make it light
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation; // Freeze rotation
 
-                if (!Collision) // If object is not colliding
-                {
-                    transform.position = Hold.transform.position; // Set position of object to hold position
-                    transform.parent = playerPosition.transform; // Set parent of object to player
-                    transform.rotation = transform.parent.rotation; // Set rotation of object to parent rotation
-                }
                 if (Collision) // If object is colliding
                 {
                     transform.parent = null; // Remove parent
@@ -61,6 +55,13 @@ public class PickUp : MonoBehaviour
                     GetComponent<Rigidbody>().velocity = force.normalized * GetComponent<Rigidbody>().velocity.magnitude; //Set velocity of object to the normalized force, times the length of the current velocity
                     GetComponent<Rigidbody>().AddForce(force * mCorrectionForce); // Add correction force
                     GetComponent<Rigidbody>().velocity *= Mathf.Min(1.0f, force.magnitude / 2); // Set velocity to the smallest value of either 1 or half the length of force vector. Velocity can not be more than 1
+                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                }
+                if (!Collision) // If object is not colliding
+                {
+                    transform.position = Hold.transform.position; // Set position of object to hold position
+                    transform.parent = playerPosition.transform; // Set parent of object to player
+                    transform.rotation = transform.parent.rotation; // Set rotation of object to parent rotation
                 }
 
                 if ((Input.GetKeyDown("e") || Vector3.Distance(Hold.transform.position, transform.position) > 12) && time > 10) // If you press E to release object or is too far away from object
@@ -110,6 +111,12 @@ public class PickUp : MonoBehaviour
     }
     void OnCollisionExit() // When no longer colliding
     {
-        Collision = false; // Set collision false
+        StartCoroutine(collisionFalse());
+    }
+    IEnumerator collisionFalse()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        Collision = false;
     }
 }

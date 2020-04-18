@@ -5,12 +5,14 @@ using UnityEngine;
 public class Scaling : MonoBehaviour
 {
 
-    Vector3 smallCube = new Vector3(200.0f, 200.0f, 200.0f);
-    Vector3 mediumCube = new Vector3(500f, 500f, 500f);
+    Vector3 smallCube = new Vector3(250.0f, 250.0f, 250.0f);
+    Vector3 mediumCube = new Vector3(600f, 600f, 600f);
     Vector3 largeCube = new Vector3(1000f, 1000f, 1000f);
 
     public bool canScale = true;
 
+    public bool isScaling = false;
+    
     public Vector3 velocity = Vector3.zero;
 
     float delta = 2f;
@@ -27,10 +29,12 @@ public class Scaling : MonoBehaviour
     {
         while (Mathf.Abs(transform.localScale.magnitude - targetCube.magnitude) > delta)
             {
+            isScaling = true;
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
             }
         gameObject.GetComponent<PickUp>().ready = true;
+        isScaling = false;
         yield return null;
     }
 
@@ -38,10 +42,12 @@ public class Scaling : MonoBehaviour
     {
         while (Mathf.Abs(transform.localScale.magnitude - targetCube.magnitude) > delta)
         {
+            isScaling = true;
             yield return new WaitForEndOfFrame();
             transform.localScale = Vector3.SmoothDamp(transform.localScale, targetCube, ref velocity, tempSmoothSpeed);
         }
         gameObject.GetComponent<PickUp>().ready = true;
+        isScaling = false;
         yield return null;
     }
 
@@ -143,14 +149,14 @@ public class Scaling : MonoBehaviour
     {
         if (collision.tag == "Player") {
             canScale = false;
-            Debug.Log("Can not scale");
+            //Debug.Log("Can not scale");
         }      
     }
     private void OnTriggerExit(Collider collision)
     {
         if (collision.tag == "Player") {
             canScale = true;
-            Debug.Log("Can scale");
+            //Debug.Log("Can scale");
         }
     }
 }

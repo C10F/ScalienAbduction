@@ -17,6 +17,7 @@ TagManager:
   - Small Cube
   - Large Cube
   - Drop Button
+  - Door Button
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+  - GroundLight
   - 
   - 
   - 
