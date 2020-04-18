@@ -8,7 +8,7 @@ public class doorButton : MonoBehaviour
 
     public void OpenDoor()
     {
-        button.SendMessage("TurnOnOffDiodes");
+        button.SendMessage("Update");
     }
 
 }

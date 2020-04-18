@@ -24,8 +24,8 @@ public class RayCast : MonoBehaviour
 
                 if (Input.GetKeyDown("e")) // If 'e' is pressed
                 {
-                        if(hit.transform.tag == "Small Cube") { hit.transform.SendMessage("pickUp"); } // If small cube, send pickup message
-                        if (hit.transform.tag == "Medium Cube") { hit.transform.SendMessage("push"); } // If medium cube, send push message
+                    if (hit.transform.tag == "Small Cube") { hit.transform.SendMessage("pickUp"); } // If small cube, send pickup message
+                    if (hit.transform.tag == "Medium Cube") { hit.transform.SendMessage("push"); } // If medium cube, send push message
                 }
             }
 
@@ -38,19 +38,19 @@ public class RayCast : MonoBehaviour
                 hit.transform.SendMessage("upScale"); // send message upScale
             }
 
-            if (hit.transform.tag == "Drop Button") 
+            if (hit.transform.tag == "Drop Button")
             {
-                if(Input.GetKeyDown("e")) hit.transform.SendMessage("DropCubes");
+                if (Input.GetKeyDown("e")) hit.transform.SendMessage("DropCubes");
             }
 
             // This is for opening the doors with a button on level 4
-            /*if (hit.transform.tag == "Door Button")
+            if (hit.transform.tag == "Door Button")
             {
-                if (Input.GetKeyDown("e")) hit.transform.SendMessage("TurnOnOffDiodes");
+                if (Input.GetKeyDown("e")) hit.transform.SendMessage("startScript");
+
             }
-            */
+
         }
-            
     }
 }
 

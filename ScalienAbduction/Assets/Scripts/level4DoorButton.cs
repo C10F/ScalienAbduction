@@ -11,7 +11,7 @@ public class level4DoorButton : MonoBehaviour
     public List<GameObject> door2FloorDiodes = new List<GameObject>();
 
     public float speed = 1f;
-    private int doorDis = 5; //Door Displacement
+    private int doorDis = 8; //Door Displacement
     private Vector3 doorDisSpotRight;
     private Vector3 doorDisSpotLeft;
 
@@ -25,13 +25,27 @@ public class level4DoorButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
-        if (Input.GetKeyDown("j"))
-        {
+
             StartCoroutine(TurnOnOffDiodes());
             StartCoroutine(TurnOnOffDiodesDoor2());
+
+
+        if (door1Done && door2Done)
+        {
+            StopCoroutine(door1Unlock());
+            StopCoroutine(door2Unlock());
+            StopCoroutine(TurnOnOffDiodes());
+            StopCoroutine(TurnOnOffDiodesDoor2());
         }
+    }
+    */
+
+    void startScript()
+    {
+        StartCoroutine(TurnOnOffDiodes());
+        StartCoroutine(TurnOnOffDiodesDoor2());
 
         if (door1Done && door2Done)
         {
