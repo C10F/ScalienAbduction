@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5446669407378158852}
   - component: {fileID: 4742445700636880936}
   - component: {fileID: 3334060003525076081}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cc9958354ea3f064bb0eee5bd8bce898, type: 2}
+  - {fileID: 2100000, guid: b22f0873bf44ddd428f2f4e313b627b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 1768339064803896122}
   - component: {fileID: 4309550435483857642}
   - component: {fileID: 4839937918444234978}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 812562886855531192}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Empty Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}

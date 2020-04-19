@@ -37,8 +37,8 @@ public class RayCast : MonoBehaviour
             {
                 hit.transform.SendMessage("upScale"); // send message upScale
             }
-            // This is for opening the doors with a button on level 2
-            if (hit.transform.tag == "Drop Button") 
+
+            if (hit.transform.tag == "Drop Button")
             {
                 if (Input.GetKeyDown("e")) hit.transform.SendMessage("DropCubes");
             }

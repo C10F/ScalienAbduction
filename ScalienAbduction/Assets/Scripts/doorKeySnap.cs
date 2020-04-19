@@ -44,6 +44,7 @@ public class doorKeySnap : MonoBehaviour
             var cubeRenderer = mediumPreasurePlateRim.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             mediumUnlocked = false;
+            scaleManager.GetComponent<scaleManager>().onPlate = false;
             snapped = false;
         }
 
@@ -52,6 +53,7 @@ public class doorKeySnap : MonoBehaviour
             var cubeRenderer = smallPreasurePlateRimA.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallAUnlocked = false;
+            scaleManager.GetComponent<scaleManager>().onPlate = false;
             snapped = false;
         }
 
@@ -60,6 +62,7 @@ public class doorKeySnap : MonoBehaviour
             var cubeRenderer = smallPreasurePlateRimB.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_BaseColor", Color.red);
             smallBUnlocked = false;
+            scaleManager.GetComponent<scaleManager>().onPlate = false;
             snapped = false;
         }
     }
@@ -116,23 +119,25 @@ public class doorKeySnap : MonoBehaviour
     {
         if ((other.tag == "smallPreasurePlateA" || other.tag == "smallPreasurePlateB" || other.tag == "mediumPreasurePlate") && this.transform.tag != "Large Cube")
         {
-            if (this.GetComponent<PickUp>().pickedUp == false)
+            if (this.GetComponent<PickUp>().pickedUp == false && scaleManager.GetComponent<scaleManager>().onPlate == false)
             {
+                scaleManager.GetComponent<scaleManager>().onPlate = true;
                 Vector3 platePos = other.transform.position;
                 if(this.transform.tag=="Small Cube")
                 {
-                    this.transform.position = platePos + new Vector3(0, 1.5f, 0);
+                    this.transform.localPosition = platePos + new Vector3(0, 1.5f, 0);
                 }
                 if (this.transform.tag == "Medium Cube")
                 {
-                    this.transform.position = platePos + new Vector3(0, 2.5f, 0);
+                    this.transform.localPosition = platePos + new Vector3(0, 2.5f, 0);
                 }
+                GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
 
                 Quaternion plateRot = other.transform.rotation;
                 this.transform.localRotation = plateRot;
             }
 
-            gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<CollisionCheck>().dropS[4]);
+            gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<CollisionCheck>().dropS[4], 3.0f);
 
         }
     }

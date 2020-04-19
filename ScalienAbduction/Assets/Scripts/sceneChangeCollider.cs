@@ -5,19 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class sceneChangeCollider : MonoBehaviour
 {
-
-    public GameObject SceneChanger;
-    //public GameObject exitDoor;
-
-
-    private void Start()
-    {
-        SceneChanger = GameObject.Find("SceneFade"); 
-    }
+    public string scene;
+    public GameObject exitDoor;
     void OnTriggerEnter(Collider collision)
     {
         Debug.Log("Player Entered");
         if (collision.gameObject.tag == "Player")
-            SceneChanger.SendMessage("FadeToLevel");
+            exitDoor.GetComponent<doorLogicUnlock>().StartCoroutine("doorLockUp");
+            SceneManager.LoadScene(scene);
     }
 }
