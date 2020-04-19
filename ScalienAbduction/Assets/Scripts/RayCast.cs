@@ -47,6 +47,12 @@ public class RayCast : MonoBehaviour
             {
                 if (Input.GetKeyDown("e")) hit.transform.SendMessage("OpenDoor");
             }
+
+            if (hit.transform.tag == "Door Button")
+            {
+                if (Input.GetKeyDown("e")) hit.transform.SendMessage("startScript");
+
+            }
         }
             
     }
