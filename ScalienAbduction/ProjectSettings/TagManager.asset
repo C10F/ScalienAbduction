@@ -18,6 +18,9 @@ TagManager:
   - Large Cube
   - Drop Button
   - Door Button
+  - Door2Light
+  - pressurePlateLight
+  - floorDiodes4
   layers:
   - Default
   - TransparentFX

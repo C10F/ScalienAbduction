@@ -10,9 +10,12 @@ public class doorLogicUnlock : MonoBehaviour
     public List<GameObject> floorDiodes = new List<GameObject>();
 
     public float speed = 5f;
+    private float dist;
     private int doorDis = 10; //Door Displacement
-    private Vector3 doorDisSpotRight;
-    private Vector3 doorDisSpotLeft;
+    private Vector3 doorDisSpotRightClose;
+    private Vector3 doorDisSpotRightOpen;
+    private Vector3 doorDisSpotLeftClose;
+    private Vector3 doorDisSpotLeftOpen;
 
     private bool moving = false;
     private bool rightDone = false;
@@ -22,17 +25,23 @@ public class doorLogicUnlock : MonoBehaviour
     void Start()
     {
         floorDiodes.AddRange(GameObject.FindGameObjectsWithTag("floorDiode"));
+        doorDisSpotRightOpen = exitDoorRight.transform.localPosition - new Vector3(doorDis, 0, 0);
+        doorDisSpotRightClose = exitDoorRight.transform.localPosition;
+        doorDisSpotLeftOpen = exitDoorLeft.transform.localPosition + new Vector3(doorDis, 0, 0);
+        doorDisSpotLeftClose = exitDoorLeft.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(dist > 0) Debug.Log("distance is: " + dist);
         if (!moving)
         {
             if (doorKeySnap.mediumUnlocked == true && doorKeySnap.smallAUnlocked == true && doorKeySnap.smallBUnlocked == true)
             {
                 if(!open)
                 {
+                    Debug.Log("opening door");
                     open = !open;
                     StartCoroutine(TurnOnOffDiodes());
                 }
@@ -41,7 +50,9 @@ public class doorLogicUnlock : MonoBehaviour
             {
                 if (open)
                 {
-                    open = !open;
+                    Debug.Log("closing door");
+                    //open = !open;
+                    open = false;
                     StartCoroutine(TurnOnOffDiodes());
                 }
             }
@@ -90,22 +101,29 @@ public class doorLogicUnlock : MonoBehaviour
     {
         if(open)
         {
-            doorDisSpotRight = exitDoorRight.transform.localPosition - new Vector3(doorDis, 0, 0);
-            while (exitDoorRight.transform.localPosition != doorDisSpotRight)
+            while (exitDoorRight.transform.localPosition != doorDisSpotRightOpen)
             {
-                exitDoorRight.transform.localPosition = Vector3.Lerp(exitDoorRight.transform.localPosition, doorDisSpotRight, Time.deltaTime * speed);
+                if (Vector3.Distance(exitDoorRight.transform.localPosition, doorDisSpotRightOpen) > 0.4 && exitDoorRight.transform.localPosition.x > doorDisSpotRightOpen.x)
+                {
+                    exitDoorRight.transform.localPosition = Vector3.Lerp(exitDoorRight.transform.localPosition, doorDisSpotRightOpen, Time.deltaTime * speed);
+                }
+                else exitDoorRight.transform.localPosition = doorDisSpotRightOpen;
                 yield return null;
             }
         }
         else
         {
-            doorDisSpotRight = exitDoorRight.transform.localPosition + new Vector3(doorDis, 0, 0);
-            while (exitDoorRight.transform.localPosition != doorDisSpotRight)
+            while (exitDoorRight.transform.localPosition != doorDisSpotRightClose)
             {
-                exitDoorRight.transform.localPosition = Vector3.Lerp(exitDoorRight.transform.localPosition, doorDisSpotRight, Time.deltaTime * speed);
+                if (Vector3.Distance(exitDoorRight.transform.localPosition, doorDisSpotRightClose) > 0.4 && exitDoorRight.transform.localPosition.x < doorDisSpotRightOpen.x)
+                {
+                    exitDoorRight.transform.localPosition = Vector3.Lerp(exitDoorRight.transform.localPosition, doorDisSpotRightClose, Time.deltaTime * speed);
+                }
+                else exitDoorRight.transform.localPosition = doorDisSpotRightClose;
                 yield return null;
             }
         }
+        Debug.Log("lerp done");
         while (!rightDone || !leftDone)
         {
             if (!rightDone)
@@ -115,26 +133,32 @@ public class doorLogicUnlock : MonoBehaviour
             yield return null;
         }
        
-        //yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(1f);
     }
 
     IEnumerator LeftDoorOpenLock()
     {
         if(open)
         {
-            doorDisSpotLeft = exitDoorLeft.transform.localPosition + new Vector3(doorDis, 0, 0);
-            while (exitDoorLeft.transform.localPosition != doorDisSpotLeft)
+            while (exitDoorLeft.transform.localPosition != doorDisSpotLeftOpen)
             {
-                exitDoorLeft.transform.localPosition = Vector3.Lerp(exitDoorLeft.transform.localPosition, doorDisSpotLeft, Time.deltaTime * speed);
+                if (Vector3.Distance(exitDoorLeft.transform.localPosition, doorDisSpotLeftOpen) > 0.4 && exitDoorLeft.transform.localPosition.x < doorDisSpotLeftOpen.x )
+                {
+                    exitDoorLeft.transform.localPosition = Vector3.Lerp(exitDoorLeft.transform.localPosition, doorDisSpotLeftOpen, Time.deltaTime * speed);
+                }
+                else exitDoorLeft.transform.localPosition = doorDisSpotLeftOpen;
                 yield return null;
             }
         }
         else
         {
-            doorDisSpotLeft = exitDoorLeft.transform.localPosition - new Vector3(doorDis, 0, 0);
-            while (exitDoorLeft.transform.localPosition != doorDisSpotLeft)
+            while (exitDoorLeft.transform.localPosition != doorDisSpotLeftClose)
             {
-                exitDoorLeft.transform.localPosition = Vector3.Lerp(exitDoorLeft.transform.localPosition, doorDisSpotLeft, Time.deltaTime * speed);
+                if (Vector3.Distance(exitDoorLeft.transform.localPosition, doorDisSpotLeftClose) > 0.4 && exitDoorLeft.transform.localPosition.x > doorDisSpotLeftOpen.x)
+                {
+                    exitDoorLeft.transform.localPosition = Vector3.Lerp(exitDoorLeft.transform.localPosition, doorDisSpotLeftClose, Time.deltaTime * speed);
+                }
+                else exitDoorLeft.transform.localPosition = doorDisSpotLeftClose;
                 yield return null;
             }
         }
@@ -146,6 +170,6 @@ public class doorLogicUnlock : MonoBehaviour
             }
             yield return null;
         }
-       // yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(1f);
     }
 }

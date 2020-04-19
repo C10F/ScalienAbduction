@@ -20,18 +20,14 @@ public class level4DoorButton : MonoBehaviour
 
     void Start()
     {
-        floorDiodes.AddRange(GameObject.FindGameObjectsWithTag("floorDiode"));
+        floorDiodes.AddRange(GameObject.FindGameObjectsWithTag("floorDiodes4"));
         door2FloorDiodes.AddRange(GameObject.FindGameObjectsWithTag("Door2Light"));
     }
 
     // Update is called once per frame
-    /*void Update()
+void Update()
     {
-
-            StartCoroutine(TurnOnOffDiodes());
-            StartCoroutine(TurnOnOffDiodesDoor2());
-
-
+ 
         if (door1Done && door2Done)
         {
             StopCoroutine(door1Unlock());
@@ -40,20 +36,18 @@ public class level4DoorButton : MonoBehaviour
             StopCoroutine(TurnOnOffDiodesDoor2());
         }
     }
-    */
+ 
 
     void startScript()
     {
         StartCoroutine(TurnOnOffDiodes());
         StartCoroutine(TurnOnOffDiodesDoor2());
 
-        if (door1Done && door2Done)
-        {
-            StopCoroutine(door1Unlock());
-            StopCoroutine(door2Unlock());
-            StopCoroutine(TurnOnOffDiodes());
-            StopCoroutine(TurnOnOffDiodesDoor2());
-        }
+        Color oldCol = gameObject.GetComponent<Renderer>().material.GetColor("_Tint");
+        gameObject.GetComponent<Renderer>().material.SetColor("_Tint", Color.green);
+
+        StartCoroutine(ChangeCol(oldCol, 5, gameObject));
+
     }
 
     IEnumerator TurnOnOffDiodes()
@@ -139,5 +133,11 @@ public class level4DoorButton : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(3f);
+    }
+
+    IEnumerator ChangeCol(Color now, int time, GameObject target)
+    {
+        yield return new WaitForSeconds(time);
+        target.GetComponent<Renderer>().material.SetColor("_Tint", now);
     }
 }

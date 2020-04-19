@@ -8,7 +8,7 @@ public class Scaling : MonoBehaviour
     Vector3 smallCube = new Vector3(250.0f, 250.0f, 250.0f);
     Vector3 mediumCube = new Vector3(600f, 600f, 600f);
     Vector3 largeCube = new Vector3(1000f, 1000f, 1000f);
-
+    private int[] masses = { 1000000, 9000000, 15000000 };
     public bool canScale = true;
 
     public bool isScaling = false;
@@ -72,6 +72,7 @@ public class Scaling : MonoBehaviour
                         gameObject.GetComponent<PickUp>().ready = false;
                         StartCoroutine(smoothUpscale(largeCube, smoothSpeed));
                         this.GetComponent<ScaleWeight>().scaleWeight = l;
+                        this.GetComponent<Rigidbody>().mass = masses[2];
                     }
 
                     //scaleManager.currentScaleWeight += 1;
@@ -91,6 +92,7 @@ public class Scaling : MonoBehaviour
                         gameObject.GetComponent<PickUp>().ready = false;
                         StartCoroutine(smoothUpscale(mediumCube, smoothSpeed));
                         this.GetComponent<ScaleWeight>().scaleWeight = m;
+                        this.GetComponent<Rigidbody>().mass = masses[1];
                     }
                 }
 
@@ -120,7 +122,8 @@ public class Scaling : MonoBehaviour
                     gameObject.GetComponent<PickUp>().ready = false;
                     StartCoroutine(smoothDownscale(smallCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = s;
-                }
+                    this.GetComponent<Rigidbody>().mass = masses[0];
+                    }
                 //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
             }
 
@@ -138,6 +141,7 @@ public class Scaling : MonoBehaviour
                     gameObject.GetComponent<PickUp>().ready = false;
                     StartCoroutine(smoothDownscale(mediumCube, smoothSpeed));
                     this.GetComponent<ScaleWeight>().scaleWeight = m;
+                    this.GetComponent<Rigidbody>().mass = masses[1];
                 }
                 //Debug.Log("Current scale weight is: " + scaleManager.currentScaleWeight);
             }
